@@ -31,8 +31,10 @@ def fetch_data(query, db="incubatorwiki"):
 
         df = pd.DataFrame(result)
         df["prefix"] = df["prefix"].apply(lambda x: x.decode("utf-8"))
-    except:
+        print(f'data fetched successfully at {{datetime.now()}}.')
+    except Exception as e:
         df = None
+        print(f'data fetch failed due to: \n {e}')
     
     return df
 
@@ -49,7 +51,7 @@ def main():
             clear_destination_table(destination_table, cur)
             update_destination_table(df, destination_table, cur)
             con.commit()
-            print(f"incubator revisions daily table updateda at: {datetime.now()}.")
+            print(f"incubator revisions daily table updated at: {datetime.now()}.")
         except Exception as e:
             con.rollback()
             print(f"update failed due to: {e}")
