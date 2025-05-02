@@ -31,8 +31,20 @@ WITH base AS (
 )
 
 SELECT
-  DATE(NOW()) AS snapshot_date,
-  *,
+  DATE(CURRENT_TIME()) AS snapshot_date,
+  rev_id, 
+  rev_actor, 
+  rev_timestamp, 
+  rev_len, 
+  rev_parent_id,
+  page_namespace, 
+  page_id,                                
+  actor_id,
+  actor_name,
+  byte_diff,
+  prefix,
+  project_code,
+  is_last_3m,
   CASE 
     WHEN project_code = 'Wp' THEN 'wikipedia'
     WHEN project_code = 'Wq' THEN 'wikiquote'
