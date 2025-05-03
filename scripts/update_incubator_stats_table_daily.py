@@ -31,8 +31,7 @@ user_agent = forge.set_user_agent(
     tool="Wikimedia Incubator Superset Dashboard",
     email="kcvelaga@gmail.com",
 )
-
-destination_table = "incubator_revisions_daily"
+destination_table = "incubator_stats_daily"
 
 with open('../project_map.json', 'r', encoding='utf-8') as f:
     project_map = json.load(f)

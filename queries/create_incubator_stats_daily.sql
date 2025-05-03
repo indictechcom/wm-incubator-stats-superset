@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS incubator_language_stats_daily (
+CREATE TABLE IF NOT EXISTS incubator_stats_daily (
     snapshot_date DATE COMMENT 'Date on which the snapshot was generated on.',
     project VARCHAR(50) COMMENT 'Expanded project name (e.g., wikipedia).',
     language_code VARCHAR(10) COMMENT 'Language code extracted from the prefix (e.g., en, fr, etc.).',
