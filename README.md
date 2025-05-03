@@ -1,0 +1,3 @@
+The repo contains code that generated and updates the database that is by Wikimedia Incubator Stats dashboard on Wikimedia's public Superset instance. The dashboard gives an overview of various activity metrics related to incubating projects on [Wikimedia Incubator](https://incubator.wikimedia.org/wiki/Incubator:Main_Page). This superseedes the preceeding Plotly-Dash based dashboard at https://incubatordashboard.toolforge.org/, as it easier to add new metrics to Superset and create time-series charts for activity tracking on Superset.
+
+The dashboard can be accessed at: https://superset.wmcloud.org/superset/dashboard/wikimedia-incubator-stats/

@@ -74,7 +74,7 @@ def fetch_data(query, db="incubatorwiki"):
 
 
 def main():
-    logging.info(f"Update process started at {datetime.now()}.")
+    logging.info(f"Update process started.")
 
     db_groups_inscope = list(project_map.values())
     cdw = get_canonical_data(db_groups_inscope)
@@ -96,7 +96,7 @@ def main():
             EXCL_PREFIXES=excl_prefixes_sql,
             EXCL_USERS=excl_user_sql
         ))
-        logging.info(f"Data fetched successfully at {datetime.now()}.")
+        logging.info(f"Data fetched successfully.")
     except Exception as e:
         logging.error(f"Data fetch failed: {e}")
         return
@@ -108,7 +108,7 @@ def main():
             clear_destination_table(destination_table, cur)
             update_destination_table(df, destination_table, cur)
             con.commit()
-            logging.info(f"Table '{destination_table}' updated successfully at {datetime.now()}.")
+            logging.info(f"Table '{destination_table}' updated successfully.")
         except Exception as e:
             con.rollback()
             logging.error(f"Update failed: {e}")
@@ -116,7 +116,7 @@ def main():
             cur.close()
             con.close()
 
-    logging.info(f"Update process finished at {datetime.now()}.")
+    logging.info(f"Update process finished.")
 
 
 if __name__ == "__main__":

@@ -27,24 +27,16 @@ WITH base AS (
        AND prefix NOT IN {EXCL_PREFIXES}
 ),
 
-active_editors AS (
-    SELECT actor_id
-      FROM base
-     GROUP BY actor_id
-    HAVING COUNT(DISTINCT rev_id) > 5
-),
-
 daily_metrics AS (
     SELECT base.prefix,
            base.rev_date,
            COUNT(DISTINCT base.rev_id) AS rev_count,
-           COUNT(DISTINCT CASE WHEN ae.actor_id IS NOT NULL THEN base.actor_id ELSE NULL END) AS editor_count,
+           COUNT(DISTINCT base.actor_id) AS editor_count,
            COUNT(DISTINCT base.page_id) AS edited_page_count,
            COUNT(DISTINCT CASE WHEN base.rev_parent_id = 0 THEN base.rev_id ELSE NULL END) AS created_page_count,
            SUM(CASE WHEN byte_diff < 0 THEN byte_diff ELSE 0 END) AS bytes_removed_30d,
            SUM(CASE WHEN byte_diff >= 0 THEN byte_diff ELSE 0 END) AS bytes_added_30d
       FROM base
-      LEFT JOIN active_editors AS ae ON base.actor_id = ae.actor_id
      GROUP BY base.prefix, base.rev_date
 ),
 
