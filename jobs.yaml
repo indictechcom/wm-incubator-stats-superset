@@ -1,0 +1,6 @@
+- command: /data/project/incubator-dashboard-db/www/python/src/scripts/update_incubator_revisions_daily.sh
+  image: python3.11
+  name: incubator-stats-daily
+  schedule: "@daily"
+  emails: onfailure
+  retry: 3
