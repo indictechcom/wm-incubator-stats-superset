@@ -33,12 +33,12 @@ user_agent = forge.set_user_agent(
 )
 destination_table = "incubator_stats_daily"
 
-with open('../project_map.json', 'r', encoding='utf-8') as f:
+with open('../static_data/project_map.json', 'r', encoding='utf-8') as f:
     project_map = json.load(f)
 
 project_map_r = {v: k for k, v in project_map.items()}
 
-with open('../exclude_users.json', 'r', encoding='utf-8') as f:
+with open('../static_data/exclude_users.json', 'r', encoding='utf-8') as f:
     exclude_users = json.load(f)
 
 def construct_prefix(lang_code, db_group):
