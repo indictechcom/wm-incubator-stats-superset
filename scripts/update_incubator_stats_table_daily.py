@@ -103,7 +103,7 @@ def main():
         return
 
     if df is not None:
-        con = forge.toolsdb("s56696__incubator_stats_superset_p")
+        con = forge.toolsdb("s56696__incubator_stats_daily_p")
         cur = con.cursor()
         try:
             clear_destination_table(destination_table, cur)
