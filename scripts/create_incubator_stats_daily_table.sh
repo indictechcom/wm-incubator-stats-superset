@@ -2,10 +2,10 @@
 
 CNF_PATH="$HOME/replica.my.cnf"
 
-SQL_FILE="$HOME/www/python/src/queries/create_incubator_revisions_daily.sql"
+SQL_FILE="$HOME/www/python/src/queries/create_incubator_stats_daily.sql"
 
 DATABASE="s56696__incubator_stats_superset_p"
 HOST="tools.db.svc.wikimedia.cloud"
 
 mariadb --defaults-file="$CNF_PATH" -h "$HOST" "$DATABASE" < "$SQL_FILE" && \
-echo "table incubator_revisions_daily created in $DATABASE."
+echo "table incubator_stats_daily created in $DATABASE."
