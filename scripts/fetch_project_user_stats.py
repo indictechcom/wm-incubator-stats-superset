@@ -8,7 +8,7 @@ import logging
 import pandas as pd
 import toolforge as forge
 import urllib.request
-
+import json
 # Setup logging
 log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs')
 os.makedirs(log_dir, exist_ok=True)
@@ -65,17 +65,15 @@ def check_grad(df: pd.DataFrame) -> bool:
     return all(monthly_users.loc[last_4_months] >= 4)
 
 def main():
-    """Main function to run the project user stats system."""
-    import json
     with open('../static_data/dbnames.json', 'r') as f:
         dbnames = json.load(f)
-    print(f"Found {len(dbnames)} projects")
+    grad_projects = []
     for dbname in dbnames:
         project = dbname['dbname']
         df = fetch_graduation_candidates(project)
-        meets_criteria = check_grad(df)
-        if meets_criteria:
-            logging.info(f"Project {dbname['dbname']} meets graduation criteria!")
+        if check_grad(df):
+            grad_projects.append(project)
+    return grad_projects
 
 if __name__ == "__main__":
     main()
