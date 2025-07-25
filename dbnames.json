@@ -1,0 +1,3155 @@
+[
+  {
+    "dbname": "aawiki"
+  },
+  {
+    "dbname": "aawiktionary"
+  },
+  {
+    "dbname": "aawikibooks"
+  },
+  {
+    "dbname": "abwiki"
+  },
+  {
+    "dbname": "abwiktionary"
+  },
+  {
+    "dbname": "acewiki"
+  },
+  {
+    "dbname": "adywiki"
+  },
+  {
+    "dbname": "afwiki"
+  },
+  {
+    "dbname": "afwiktionary"
+  },
+  {
+    "dbname": "afwikibooks"
+  },
+  {
+    "dbname": "afwikiquote"
+  },
+  {
+    "dbname": "akwiki"
+  },
+  {
+    "dbname": "akwiktionary"
+  },
+  {
+    "dbname": "akwikibooks"
+  },
+  {
+    "dbname": "altwiki"
+  },
+  {
+    "dbname": "amwiki"
+  },
+  {
+    "dbname": "amwiktionary"
+  },
+  {
+    "dbname": "amwikiquote"
+  },
+  {
+    "dbname": "amiwiki"
+  },
+  {
+    "dbname": "anwiki"
+  },
+  {
+    "dbname": "anwiktionary"
+  },
+  {
+    "dbname": "angwiki"
+  },
+  {
+    "dbname": "angwiktionary"
+  },
+  {
+    "dbname": "angwikibooks"
+  },
+  {
+    "dbname": "angwikiquote"
+  },
+  {
+    "dbname": "angwikisource"
+  },
+  {
+    "dbname": "annwiki"
+  },
+  {
+    "dbname": "anpwiki"
+  },
+  {
+    "dbname": "arwiki"
+  },
+  {
+    "dbname": "arwiktionary"
+  },
+  {
+    "dbname": "arwikibooks"
+  },
+  {
+    "dbname": "arwikinews"
+  },
+  {
+    "dbname": "arwikiquote"
+  },
+  {
+    "dbname": "arwikisource"
+  },
+  {
+    "dbname": "arwikiversity"
+  },
+  {
+    "dbname": "arcwiki"
+  },
+  {
+    "dbname": "arywiki"
+  },
+  {
+    "dbname": "arzwiki"
+  },
+  {
+    "dbname": "aswiki"
+  },
+  {
+    "dbname": "aswiktionary"
+  },
+  {
+    "dbname": "aswikibooks"
+  },
+  {
+    "dbname": "aswikiquote"
+  },
+  {
+    "dbname": "aswikisource"
+  },
+  {
+    "dbname": "astwiki"
+  },
+  {
+    "dbname": "astwiktionary"
+  },
+  {
+    "dbname": "astwikibooks"
+  },
+  {
+    "dbname": "astwikiquote"
+  },
+  {
+    "dbname": "atjwiki"
+  },
+  {
+    "dbname": "avwiki"
+  },
+  {
+    "dbname": "avwiktionary"
+  },
+  {
+    "dbname": "avkwiki"
+  },
+  {
+    "dbname": "awawiki"
+  },
+  {
+    "dbname": "aywiki"
+  },
+  {
+    "dbname": "aywiktionary"
+  },
+  {
+    "dbname": "aywikibooks"
+  },
+  {
+    "dbname": "azwiki"
+  },
+  {
+    "dbname": "azwiktionary"
+  },
+  {
+    "dbname": "azwikibooks"
+  },
+  {
+    "dbname": "azwikiquote"
+  },
+  {
+    "dbname": "azwikisource"
+  },
+  {
+    "dbname": "azbwiki"
+  },
+  {
+    "dbname": "bawiki"
+  },
+  {
+    "dbname": "bawikibooks"
+  },
+  {
+    "dbname": "banwiki"
+  },
+  {
+    "dbname": "banwikisource"
+  },
+  {
+    "dbname": "barwiki"
+  },
+  {
+    "dbname": "bbcwiki"
+  },
+  {
+    "dbname": "bclwiki"
+  },
+  {
+    "dbname": "bclwiktionary"
+  },
+  {
+    "dbname": "bclwikiquote"
+  },
+  {
+    "dbname": "bclwikisource"
+  },
+  {
+    "dbname": "bdrwiki"
+  },
+  {
+    "dbname": "bewiki"
+  },
+  {
+    "dbname": "bewiktionary"
+  },
+  {
+    "dbname": "bewikibooks"
+  },
+  {
+    "dbname": "bewikiquote"
+  },
+  {
+    "dbname": "bewikisource"
+  },
+  {
+    "dbname": "be_x_oldwiki"
+  },
+  {
+    "dbname": "bewwiki"
+  },
+  {
+    "dbname": "bgwiki"
+  },
+  {
+    "dbname": "bgwiktionary"
+  },
+  {
+    "dbname": "bgwikibooks"
+  },
+  {
+    "dbname": "bgwikinews"
+  },
+  {
+    "dbname": "bgwikiquote"
+  },
+  {
+    "dbname": "bgwikisource"
+  },
+  {
+    "dbname": "bhwiki"
+  },
+  {
+    "dbname": "bhwiktionary"
+  },
+  {
+    "dbname": "biwiki"
+  },
+  {
+    "dbname": "biwiktionary"
+  },
+  {
+    "dbname": "biwikibooks"
+  },
+  {
+    "dbname": "bjnwiki"
+  },
+  {
+    "dbname": "bjnwiktionary"
+  },
+  {
+    "dbname": "bjnwikiquote"
+  },
+  {
+    "dbname": "blkwiki"
+  },
+  {
+    "dbname": "blkwiktionary"
+  },
+  {
+    "dbname": "bmwiki"
+  },
+  {
+    "dbname": "bmwiktionary"
+  },
+  {
+    "dbname": "bmwikibooks"
+  },
+  {
+    "dbname": "bmwikiquote"
+  },
+  {
+    "dbname": "bnwiki"
+  },
+  {
+    "dbname": "bnwiktionary"
+  },
+  {
+    "dbname": "bnwikibooks"
+  },
+  {
+    "dbname": "bnwikiquote"
+  },
+  {
+    "dbname": "bnwikisource"
+  },
+  {
+    "dbname": "bnwikivoyage"
+  },
+  {
+    "dbname": "bowiki"
+  },
+  {
+    "dbname": "bowiktionary"
+  },
+  {
+    "dbname": "bowikibooks"
+  },
+  {
+    "dbname": "bpywiki"
+  },
+  {
+    "dbname": "brwiki"
+  },
+  {
+    "dbname": "brwiktionary"
+  },
+  {
+    "dbname": "brwikiquote"
+  },
+  {
+    "dbname": "brwikisource"
+  },
+  {
+    "dbname": "bswiki"
+  },
+  {
+    "dbname": "bswiktionary"
+  },
+  {
+    "dbname": "bswikibooks"
+  },
+  {
+    "dbname": "bswikinews"
+  },
+  {
+    "dbname": "bswikiquote"
+  },
+  {
+    "dbname": "bswikisource"
+  },
+  {
+    "dbname": "btmwiki"
+  },
+  {
+    "dbname": "btmwiktionary"
+  },
+  {
+    "dbname": "bugwiki"
+  },
+  {
+    "dbname": "bxrwiki"
+  },
+  {
+    "dbname": "cawiki"
+  },
+  {
+    "dbname": "cawiktionary"
+  },
+  {
+    "dbname": "cawikibooks"
+  },
+  {
+    "dbname": "cawikinews"
+  },
+  {
+    "dbname": "cawikiquote"
+  },
+  {
+    "dbname": "cawikisource"
+  },
+  {
+    "dbname": "cbk_zamwiki"
+  },
+  {
+    "dbname": "cdowiki"
+  },
+  {
+    "dbname": "cewiki"
+  },
+  {
+    "dbname": "cebwiki"
+  },
+  {
+    "dbname": "chwiki"
+  },
+  {
+    "dbname": "chwiktionary"
+  },
+  {
+    "dbname": "chwikibooks"
+  },
+  {
+    "dbname": "chowiki"
+  },
+  {
+    "dbname": "chrwiki"
+  },
+  {
+    "dbname": "chrwiktionary"
+  },
+  {
+    "dbname": "chywiki"
+  },
+  {
+    "dbname": "ckbwiki"
+  },
+  {
+    "dbname": "ckbwiktionary"
+  },
+  {
+    "dbname": "cowiki"
+  },
+  {
+    "dbname": "cowiktionary"
+  },
+  {
+    "dbname": "cowikibooks"
+  },
+  {
+    "dbname": "cowikiquote"
+  },
+  {
+    "dbname": "crwiki"
+  },
+  {
+    "dbname": "crwiktionary"
+  },
+  {
+    "dbname": "crwikiquote"
+  },
+  {
+    "dbname": "crhwiki"
+  },
+  {
+    "dbname": "cswiki"
+  },
+  {
+    "dbname": "cswiktionary"
+  },
+  {
+    "dbname": "cswikibooks"
+  },
+  {
+    "dbname": "cswikinews"
+  },
+  {
+    "dbname": "cswikiquote"
+  },
+  {
+    "dbname": "cswikisource"
+  },
+  {
+    "dbname": "cswikiversity"
+  },
+  {
+    "dbname": "cswikivoyage"
+  },
+  {
+    "dbname": "csbwiki"
+  },
+  {
+    "dbname": "csbwiktionary"
+  },
+  {
+    "dbname": "cuwiki"
+  },
+  {
+    "dbname": "cvwiki"
+  },
+  {
+    "dbname": "cvwikibooks"
+  },
+  {
+    "dbname": "cywiki"
+  },
+  {
+    "dbname": "cywiktionary"
+  },
+  {
+    "dbname": "cywikibooks"
+  },
+  {
+    "dbname": "cywikiquote"
+  },
+  {
+    "dbname": "cywikisource"
+  },
+  {
+    "dbname": "dawiki"
+  },
+  {
+    "dbname": "dawiktionary"
+  },
+  {
+    "dbname": "dawikibooks"
+  },
+  {
+    "dbname": "dawikiquote"
+  },
+  {
+    "dbname": "dawikisource"
+  },
+  {
+    "dbname": "dagwiki"
+  },
+  {
+    "dbname": "dewiki"
+  },
+  {
+    "dbname": "dewiktionary"
+  },
+  {
+    "dbname": "dewikibooks"
+  },
+  {
+    "dbname": "dewikinews"
+  },
+  {
+    "dbname": "dewikiquote"
+  },
+  {
+    "dbname": "dewikisource"
+  },
+  {
+    "dbname": "dewikiversity"
+  },
+  {
+    "dbname": "dewikivoyage"
+  },
+  {
+    "dbname": "dgawiki"
+  },
+  {
+    "dbname": "dinwiki"
+  },
+  {
+    "dbname": "diqwiki"
+  },
+  {
+    "dbname": "diqwiktionary"
+  },
+  {
+    "dbname": "dsbwiki"
+  },
+  {
+    "dbname": "dtpwiki"
+  },
+  {
+    "dbname": "dtywiki"
+  },
+  {
+    "dbname": "dvwiki"
+  },
+  {
+    "dbname": "dvwiktionary"
+  },
+  {
+    "dbname": "dzwiki"
+  },
+  {
+    "dbname": "dzwiktionary"
+  },
+  {
+    "dbname": "eewiki"
+  },
+  {
+    "dbname": "elwiki"
+  },
+  {
+    "dbname": "elwiktionary"
+  },
+  {
+    "dbname": "elwikibooks"
+  },
+  {
+    "dbname": "elwikinews"
+  },
+  {
+    "dbname": "elwikiquote"
+  },
+  {
+    "dbname": "elwikisource"
+  },
+  {
+    "dbname": "elwikiversity"
+  },
+  {
+    "dbname": "elwikivoyage"
+  },
+  {
+    "dbname": "emlwiki"
+  },
+  {
+    "dbname": "enwiki"
+  },
+  {
+    "dbname": "enwiktionary"
+  },
+  {
+    "dbname": "enwikibooks"
+  },
+  {
+    "dbname": "enwikinews"
+  },
+  {
+    "dbname": "enwikiquote"
+  },
+  {
+    "dbname": "enwikisource"
+  },
+  {
+    "dbname": "enwikiversity"
+  },
+  {
+    "dbname": "enwikivoyage"
+  },
+  {
+    "dbname": "eowiki"
+  },
+  {
+    "dbname": "eowiktionary"
+  },
+  {
+    "dbname": "eowikibooks"
+  },
+  {
+    "dbname": "eowikinews"
+  },
+  {
+    "dbname": "eowikiquote"
+  },
+  {
+    "dbname": "eowikisource"
+  },
+  {
+    "dbname": "eowikivoyage"
+  },
+  {
+    "dbname": "eswiki"
+  },
+  {
+    "dbname": "eswiktionary"
+  },
+  {
+    "dbname": "eswikibooks"
+  },
+  {
+    "dbname": "eswikinews"
+  },
+  {
+    "dbname": "eswikiquote"
+  },
+  {
+    "dbname": "eswikisource"
+  },
+  {
+    "dbname": "eswikiversity"
+  },
+  {
+    "dbname": "eswikivoyage"
+  },
+  {
+    "dbname": "etwiki"
+  },
+  {
+    "dbname": "etwiktionary"
+  },
+  {
+    "dbname": "etwikibooks"
+  },
+  {
+    "dbname": "etwikiquote"
+  },
+  {
+    "dbname": "etwikisource"
+  },
+  {
+    "dbname": "euwiki"
+  },
+  {
+    "dbname": "euwiktionary"
+  },
+  {
+    "dbname": "euwikibooks"
+  },
+  {
+    "dbname": "euwikiquote"
+  },
+  {
+    "dbname": "euwikisource"
+  },
+  {
+    "dbname": "extwiki"
+  },
+  {
+    "dbname": "fawiki"
+  },
+  {
+    "dbname": "fawiktionary"
+  },
+  {
+    "dbname": "fawikibooks"
+  },
+  {
+    "dbname": "fawikinews"
+  },
+  {
+    "dbname": "fawikiquote"
+  },
+  {
+    "dbname": "fawikisource"
+  },
+  {
+    "dbname": "fawikivoyage"
+  },
+  {
+    "dbname": "fatwiki"
+  },
+  {
+    "dbname": "ffwiki"
+  },
+  {
+    "dbname": "fiwiki"
+  },
+  {
+    "dbname": "fiwiktionary"
+  },
+  {
+    "dbname": "fiwikibooks"
+  },
+  {
+    "dbname": "fiwikinews"
+  },
+  {
+    "dbname": "fiwikiquote"
+  },
+  {
+    "dbname": "fiwikisource"
+  },
+  {
+    "dbname": "fiwikiversity"
+  },
+  {
+    "dbname": "fiwikivoyage"
+  },
+  {
+    "dbname": "fjwiki"
+  },
+  {
+    "dbname": "fjwiktionary"
+  },
+  {
+    "dbname": "fowiki"
+  },
+  {
+    "dbname": "fowiktionary"
+  },
+  {
+    "dbname": "fowikisource"
+  },
+  {
+    "dbname": "fonwiki"
+  },
+  {
+    "dbname": "frwiki"
+  },
+  {
+    "dbname": "frwiktionary"
+  },
+  {
+    "dbname": "frwikibooks"
+  },
+  {
+    "dbname": "frwikinews"
+  },
+  {
+    "dbname": "frwikiquote"
+  },
+  {
+    "dbname": "frwikisource"
+  },
+  {
+    "dbname": "frwikiversity"
+  },
+  {
+    "dbname": "frwikivoyage"
+  },
+  {
+    "dbname": "frpwiki"
+  },
+  {
+    "dbname": "frrwiki"
+  },
+  {
+    "dbname": "furwiki"
+  },
+  {
+    "dbname": "fywiki"
+  },
+  {
+    "dbname": "fywiktionary"
+  },
+  {
+    "dbname": "fywikibooks"
+  },
+  {
+    "dbname": "gawiki"
+  },
+  {
+    "dbname": "gawiktionary"
+  },
+  {
+    "dbname": "gawikibooks"
+  },
+  {
+    "dbname": "gawikiquote"
+  },
+  {
+    "dbname": "gagwiki"
+  },
+  {
+    "dbname": "ganwiki"
+  },
+  {
+    "dbname": "gcrwiki"
+  },
+  {
+    "dbname": "gdwiki"
+  },
+  {
+    "dbname": "gdwiktionary"
+  },
+  {
+    "dbname": "glwiki"
+  },
+  {
+    "dbname": "glwiktionary"
+  },
+  {
+    "dbname": "glwikibooks"
+  },
+  {
+    "dbname": "glwikiquote"
+  },
+  {
+    "dbname": "glwikisource"
+  },
+  {
+    "dbname": "glkwiki"
+  },
+  {
+    "dbname": "gnwiki"
+  },
+  {
+    "dbname": "gnwiktionary"
+  },
+  {
+    "dbname": "gnwikibooks"
+  },
+  {
+    "dbname": "gomwiki"
+  },
+  {
+    "dbname": "gomwiktionary"
+  },
+  {
+    "dbname": "gorwiki"
+  },
+  {
+    "dbname": "gorwiktionary"
+  },
+  {
+    "dbname": "gorwikiquote"
+  },
+  {
+    "dbname": "gotwiki"
+  },
+  {
+    "dbname": "gotwikibooks"
+  },
+  {
+    "dbname": "gpewiki"
+  },
+  {
+    "dbname": "alswiki"
+  },
+  {
+    "dbname": "guwiki"
+  },
+  {
+    "dbname": "guwiktionary"
+  },
+  {
+    "dbname": "guwikibooks"
+  },
+  {
+    "dbname": "guwikiquote"
+  },
+  {
+    "dbname": "guwikisource"
+  },
+  {
+    "dbname": "gucwiki"
+  },
+  {
+    "dbname": "gurwiki"
+  },
+  {
+    "dbname": "guwwiki"
+  },
+  {
+    "dbname": "guwwiktionary"
+  },
+  {
+    "dbname": "guwwikinews"
+  },
+  {
+    "dbname": "guwwikiquote"
+  },
+  {
+    "dbname": "gvwiki"
+  },
+  {
+    "dbname": "gvwiktionary"
+  },
+  {
+    "dbname": "hawiki"
+  },
+  {
+    "dbname": "hawiktionary"
+  },
+  {
+    "dbname": "hakwiki"
+  },
+  {
+    "dbname": "hawwiki"
+  },
+  {
+    "dbname": "hewiki"
+  },
+  {
+    "dbname": "hewiktionary"
+  },
+  {
+    "dbname": "hewikibooks"
+  },
+  {
+    "dbname": "hewikinews"
+  },
+  {
+    "dbname": "hewikiquote"
+  },
+  {
+    "dbname": "hewikisource"
+  },
+  {
+    "dbname": "hewikivoyage"
+  },
+  {
+    "dbname": "hiwiki"
+  },
+  {
+    "dbname": "hiwiktionary"
+  },
+  {
+    "dbname": "hiwikibooks"
+  },
+  {
+    "dbname": "hiwikiquote"
+  },
+  {
+    "dbname": "hiwikisource"
+  },
+  {
+    "dbname": "hiwikiversity"
+  },
+  {
+    "dbname": "hiwikivoyage"
+  },
+  {
+    "dbname": "hifwiki"
+  },
+  {
+    "dbname": "hifwiktionary"
+  },
+  {
+    "dbname": "howiki"
+  },
+  {
+    "dbname": "hrwiki"
+  },
+  {
+    "dbname": "hrwiktionary"
+  },
+  {
+    "dbname": "hrwikibooks"
+  },
+  {
+    "dbname": "hrwikiquote"
+  },
+  {
+    "dbname": "hrwikisource"
+  },
+  {
+    "dbname": "hsbwiki"
+  },
+  {
+    "dbname": "hsbwiktionary"
+  },
+  {
+    "dbname": "htwiki"
+  },
+  {
+    "dbname": "htwikisource"
+  },
+  {
+    "dbname": "huwiki"
+  },
+  {
+    "dbname": "huwiktionary"
+  },
+  {
+    "dbname": "huwikibooks"
+  },
+  {
+    "dbname": "huwikinews"
+  },
+  {
+    "dbname": "huwikiquote"
+  },
+  {
+    "dbname": "huwikisource"
+  },
+  {
+    "dbname": "hywiki"
+  },
+  {
+    "dbname": "hywiktionary"
+  },
+  {
+    "dbname": "hywikibooks"
+  },
+  {
+    "dbname": "hywikiquote"
+  },
+  {
+    "dbname": "hywikisource"
+  },
+  {
+    "dbname": "hywwiki"
+  },
+  {
+    "dbname": "hzwiki"
+  },
+  {
+    "dbname": "iawiki"
+  },
+  {
+    "dbname": "iawiktionary"
+  },
+  {
+    "dbname": "iawikibooks"
+  },
+  {
+    "dbname": "ibawiki"
+  },
+  {
+    "dbname": "idwiki"
+  },
+  {
+    "dbname": "idwiktionary"
+  },
+  {
+    "dbname": "idwikibooks"
+  },
+  {
+    "dbname": "idwikiquote"
+  },
+  {
+    "dbname": "idwikisource"
+  },
+  {
+    "dbname": "idwikivoyage"
+  },
+  {
+    "dbname": "iewiki"
+  },
+  {
+    "dbname": "iewiktionary"
+  },
+  {
+    "dbname": "iewikibooks"
+  },
+  {
+    "dbname": "igwiki"
+  },
+  {
+    "dbname": "igwiktionary"
+  },
+  {
+    "dbname": "igwikiquote"
+  },
+  {
+    "dbname": "iglwiki"
+  },
+  {
+    "dbname": "iiwiki"
+  },
+  {
+    "dbname": "ikwiki"
+  },
+  {
+    "dbname": "ikwiktionary"
+  },
+  {
+    "dbname": "ilowiki"
+  },
+  {
+    "dbname": "inhwiki"
+  },
+  {
+    "dbname": "iowiki"
+  },
+  {
+    "dbname": "iowiktionary"
+  },
+  {
+    "dbname": "iswiki"
+  },
+  {
+    "dbname": "iswiktionary"
+  },
+  {
+    "dbname": "iswikibooks"
+  },
+  {
+    "dbname": "iswikiquote"
+  },
+  {
+    "dbname": "iswikisource"
+  },
+  {
+    "dbname": "itwiki"
+  },
+  {
+    "dbname": "itwiktionary"
+  },
+  {
+    "dbname": "itwikibooks"
+  },
+  {
+    "dbname": "itwikinews"
+  },
+  {
+    "dbname": "itwikiquote"
+  },
+  {
+    "dbname": "itwikisource"
+  },
+  {
+    "dbname": "itwikiversity"
+  },
+  {
+    "dbname": "itwikivoyage"
+  },
+  {
+    "dbname": "iuwiki"
+  },
+  {
+    "dbname": "iuwiktionary"
+  },
+  {
+    "dbname": "jawiki"
+  },
+  {
+    "dbname": "jawiktionary"
+  },
+  {
+    "dbname": "jawikibooks"
+  },
+  {
+    "dbname": "jawikinews"
+  },
+  {
+    "dbname": "jawikiquote"
+  },
+  {
+    "dbname": "jawikisource"
+  },
+  {
+    "dbname": "jawikiversity"
+  },
+  {
+    "dbname": "jawikivoyage"
+  },
+  {
+    "dbname": "jamwiki"
+  },
+  {
+    "dbname": "jbowiki"
+  },
+  {
+    "dbname": "jbowiktionary"
+  },
+  {
+    "dbname": "jvwiki"
+  },
+  {
+    "dbname": "jvwiktionary"
+  },
+  {
+    "dbname": "jvwikisource"
+  },
+  {
+    "dbname": "kawiki"
+  },
+  {
+    "dbname": "kawiktionary"
+  },
+  {
+    "dbname": "kawikibooks"
+  },
+  {
+    "dbname": "kawikiquote"
+  },
+  {
+    "dbname": "kawikisource"
+  },
+  {
+    "dbname": "kaawiki"
+  },
+  {
+    "dbname": "kaawiktionary"
+  },
+  {
+    "dbname": "kabwiki"
+  },
+  {
+    "dbname": "kbdwiki"
+  },
+  {
+    "dbname": "kbdwiktionary"
+  },
+  {
+    "dbname": "kbpwiki"
+  },
+  {
+    "dbname": "kcgwiki"
+  },
+  {
+    "dbname": "kcgwiktionary"
+  },
+  {
+    "dbname": "kgwiki"
+  },
+  {
+    "dbname": "kgewiki"
+  },
+  {
+    "dbname": "kiwiki"
+  },
+  {
+    "dbname": "kjwiki"
+  },
+  {
+    "dbname": "kkwiki"
+  },
+  {
+    "dbname": "kkwiktionary"
+  },
+  {
+    "dbname": "kkwikibooks"
+  },
+  {
+    "dbname": "kkwikiquote"
+  },
+  {
+    "dbname": "klwiki"
+  },
+  {
+    "dbname": "klwiktionary"
+  },
+  {
+    "dbname": "kmwiki"
+  },
+  {
+    "dbname": "kmwiktionary"
+  },
+  {
+    "dbname": "kmwikibooks"
+  },
+  {
+    "dbname": "knwiki"
+  },
+  {
+    "dbname": "knwiktionary"
+  },
+  {
+    "dbname": "knwikibooks"
+  },
+  {
+    "dbname": "knwikiquote"
+  },
+  {
+    "dbname": "knwikisource"
+  },
+  {
+    "dbname": "kncwiki"
+  },
+  {
+    "dbname": "kowiki"
+  },
+  {
+    "dbname": "kowiktionary"
+  },
+  {
+    "dbname": "kowikibooks"
+  },
+  {
+    "dbname": "kowikinews"
+  },
+  {
+    "dbname": "kowikiquote"
+  },
+  {
+    "dbname": "kowikisource"
+  },
+  {
+    "dbname": "kowikiversity"
+  },
+  {
+    "dbname": "koiwiki"
+  },
+  {
+    "dbname": "krwiki"
+  },
+  {
+    "dbname": "krwikiquote"
+  },
+  {
+    "dbname": "krcwiki"
+  },
+  {
+    "dbname": "kswiki"
+  },
+  {
+    "dbname": "kswiktionary"
+  },
+  {
+    "dbname": "kswikibooks"
+  },
+  {
+    "dbname": "kswikiquote"
+  },
+  {
+    "dbname": "kshwiki"
+  },
+  {
+    "dbname": "kuwiki"
+  },
+  {
+    "dbname": "kuwiktionary"
+  },
+  {
+    "dbname": "kuwikibooks"
+  },
+  {
+    "dbname": "kuwikiquote"
+  },
+  {
+    "dbname": "kuswiki"
+  },
+  {
+    "dbname": "kvwiki"
+  },
+  {
+    "dbname": "kwwiki"
+  },
+  {
+    "dbname": "kwwiktionary"
+  },
+  {
+    "dbname": "kwwikiquote"
+  },
+  {
+    "dbname": "kywiki"
+  },
+  {
+    "dbname": "kywiktionary"
+  },
+  {
+    "dbname": "kywikibooks"
+  },
+  {
+    "dbname": "kywikiquote"
+  },
+  {
+    "dbname": "lawiki"
+  },
+  {
+    "dbname": "lawiktionary"
+  },
+  {
+    "dbname": "lawikibooks"
+  },
+  {
+    "dbname": "lawikiquote"
+  },
+  {
+    "dbname": "lawikisource"
+  },
+  {
+    "dbname": "ladwiki"
+  },
+  {
+    "dbname": "lbwiki"
+  },
+  {
+    "dbname": "lbwiktionary"
+  },
+  {
+    "dbname": "lbwikibooks"
+  },
+  {
+    "dbname": "lbwikiquote"
+  },
+  {
+    "dbname": "lbewiki"
+  },
+  {
+    "dbname": "lezwiki"
+  },
+  {
+    "dbname": "lfnwiki"
+  },
+  {
+    "dbname": "lgwiki"
+  },
+  {
+    "dbname": "liwiki"
+  },
+  {
+    "dbname": "liwiktionary"
+  },
+  {
+    "dbname": "liwikibooks"
+  },
+  {
+    "dbname": "liwikinews"
+  },
+  {
+    "dbname": "liwikiquote"
+  },
+  {
+    "dbname": "liwikisource"
+  },
+  {
+    "dbname": "lijwiki"
+  },
+  {
+    "dbname": "lijwikisource"
+  },
+  {
+    "dbname": "lldwiki"
+  },
+  {
+    "dbname": "lmowiki"
+  },
+  {
+    "dbname": "lmowiktionary"
+  },
+  {
+    "dbname": "lnwiki"
+  },
+  {
+    "dbname": "lnwiktionary"
+  },
+  {
+    "dbname": "lnwikibooks"
+  },
+  {
+    "dbname": "lowiki"
+  },
+  {
+    "dbname": "lowiktionary"
+  },
+  {
+    "dbname": "lrcwiki"
+  },
+  {
+    "dbname": "ltwiki"
+  },
+  {
+    "dbname": "ltwiktionary"
+  },
+  {
+    "dbname": "ltwikibooks"
+  },
+  {
+    "dbname": "ltwikiquote"
+  },
+  {
+    "dbname": "ltwikisource"
+  },
+  {
+    "dbname": "ltgwiki"
+  },
+  {
+    "dbname": "lvwiki"
+  },
+  {
+    "dbname": "lvwiktionary"
+  },
+  {
+    "dbname": "lvwikibooks"
+  },
+  {
+    "dbname": "zh_classicalwiki"
+  },
+  {
+    "dbname": "madwiki"
+  },
+  {
+    "dbname": "madwiktionary"
+  },
+  {
+    "dbname": "maiwiki"
+  },
+  {
+    "dbname": "map_bmswiki"
+  },
+  {
+    "dbname": "mdfwiki"
+  },
+  {
+    "dbname": "mgwiki"
+  },
+  {
+    "dbname": "mgwiktionary"
+  },
+  {
+    "dbname": "mgwikibooks"
+  },
+  {
+    "dbname": "mhwiki"
+  },
+  {
+    "dbname": "mhwiktionary"
+  },
+  {
+    "dbname": "mhrwiki"
+  },
+  {
+    "dbname": "miwiki"
+  },
+  {
+    "dbname": "miwiktionary"
+  },
+  {
+    "dbname": "miwikibooks"
+  },
+  {
+    "dbname": "minwiki"
+  },
+  {
+    "dbname": "minwiktionary"
+  },
+  {
+    "dbname": "mkwiki"
+  },
+  {
+    "dbname": "mkwiktionary"
+  },
+  {
+    "dbname": "mkwikibooks"
+  },
+  {
+    "dbname": "mkwikisource"
+  },
+  {
+    "dbname": "mlwiki"
+  },
+  {
+    "dbname": "mlwiktionary"
+  },
+  {
+    "dbname": "mlwikibooks"
+  },
+  {
+    "dbname": "mlwikiquote"
+  },
+  {
+    "dbname": "mlwikisource"
+  },
+  {
+    "dbname": "mnwiki"
+  },
+  {
+    "dbname": "mnwiktionary"
+  },
+  {
+    "dbname": "mnwikibooks"
+  },
+  {
+    "dbname": "mniwiki"
+  },
+  {
+    "dbname": "mniwiktionary"
+  },
+  {
+    "dbname": "mnwwiki"
+  },
+  {
+    "dbname": "mnwwiktionary"
+  },
+  {
+    "dbname": "moswiki"
+  },
+  {
+    "dbname": "mrwiki"
+  },
+  {
+    "dbname": "mrwiktionary"
+  },
+  {
+    "dbname": "mrwikibooks"
+  },
+  {
+    "dbname": "mrwikiquote"
+  },
+  {
+    "dbname": "mrwikisource"
+  },
+  {
+    "dbname": "mrjwiki"
+  },
+  {
+    "dbname": "mswiki"
+  },
+  {
+    "dbname": "mswiktionary"
+  },
+  {
+    "dbname": "mswikibooks"
+  },
+  {
+    "dbname": "mswikisource"
+  },
+  {
+    "dbname": "mtwiki"
+  },
+  {
+    "dbname": "mtwiktionary"
+  },
+  {
+    "dbname": "muswiki"
+  },
+  {
+    "dbname": "mwlwiki"
+  },
+  {
+    "dbname": "mywiki"
+  },
+  {
+    "dbname": "mywiktionary"
+  },
+  {
+    "dbname": "mywikibooks"
+  },
+  {
+    "dbname": "mywikisource"
+  },
+  {
+    "dbname": "myvwiki"
+  },
+  {
+    "dbname": "mznwiki"
+  },
+  {
+    "dbname": "nawiki"
+  },
+  {
+    "dbname": "nawiktionary"
+  },
+  {
+    "dbname": "nawikibooks"
+  },
+  {
+    "dbname": "nawikiquote"
+  },
+  {
+    "dbname": "nahwiki"
+  },
+  {
+    "dbname": "nahwiktionary"
+  },
+  {
+    "dbname": "nahwikibooks"
+  },
+  {
+    "dbname": "zh_min_nanwiki"
+  },
+  {
+    "dbname": "zh_min_nanwiktionary"
+  },
+  {
+    "dbname": "zh_min_nanwikibooks"
+  },
+  {
+    "dbname": "zh_min_nanwikiquote"
+  },
+  {
+    "dbname": "zh_min_nanwikisource"
+  },
+  {
+    "dbname": "napwiki"
+  },
+  {
+    "dbname": "napwikisource"
+  },
+  {
+    "dbname": "ndswiki"
+  },
+  {
+    "dbname": "ndswiktionary"
+  },
+  {
+    "dbname": "ndswikibooks"
+  },
+  {
+    "dbname": "ndswikiquote"
+  },
+  {
+    "dbname": "nds_nlwiki"
+  },
+  {
+    "dbname": "newiki"
+  },
+  {
+    "dbname": "newiktionary"
+  },
+  {
+    "dbname": "newikibooks"
+  },
+  {
+    "dbname": "newwiki"
+  },
+  {
+    "dbname": "ngwiki"
+  },
+  {
+    "dbname": "niawiki"
+  },
+  {
+    "dbname": "niawiktionary"
+  },
+  {
+    "dbname": "nlwiki"
+  },
+  {
+    "dbname": "nlwiktionary"
+  },
+  {
+    "dbname": "nlwikibooks"
+  },
+  {
+    "dbname": "nlwikinews"
+  },
+  {
+    "dbname": "nlwikiquote"
+  },
+  {
+    "dbname": "nlwikisource"
+  },
+  {
+    "dbname": "nlwikivoyage"
+  },
+  {
+    "dbname": "nnwiki"
+  },
+  {
+    "dbname": "nnwiktionary"
+  },
+  {
+    "dbname": "nnwikiquote"
+  },
+  {
+    "dbname": "nowiki"
+  },
+  {
+    "dbname": "nowiktionary"
+  },
+  {
+    "dbname": "nowikibooks"
+  },
+  {
+    "dbname": "nowikinews"
+  },
+  {
+    "dbname": "nowikiquote"
+  },
+  {
+    "dbname": "nowikisource"
+  },
+  {
+    "dbname": "novwiki"
+  },
+  {
+    "dbname": "nqowiki"
+  },
+  {
+    "dbname": "nrwiki"
+  },
+  {
+    "dbname": "nrmwiki"
+  },
+  {
+    "dbname": "nsowiki"
+  },
+  {
+    "dbname": "nupwiki"
+  },
+  {
+    "dbname": "nvwiki"
+  },
+  {
+    "dbname": "nywiki"
+  },
+  {
+    "dbname": "ocwiki"
+  },
+  {
+    "dbname": "ocwiktionary"
+  },
+  {
+    "dbname": "ocwikibooks"
+  },
+  {
+    "dbname": "olowiki"
+  },
+  {
+    "dbname": "omwiki"
+  },
+  {
+    "dbname": "omwiktionary"
+  },
+  {
+    "dbname": "orwiki"
+  },
+  {
+    "dbname": "orwiktionary"
+  },
+  {
+    "dbname": "orwikisource"
+  },
+  {
+    "dbname": "oswiki"
+  },
+  {
+    "dbname": "pawiki"
+  },
+  {
+    "dbname": "pawiktionary"
+  },
+  {
+    "dbname": "pawikibooks"
+  },
+  {
+    "dbname": "pawikisource"
+  },
+  {
+    "dbname": "pagwiki"
+  },
+  {
+    "dbname": "pamwiki"
+  },
+  {
+    "dbname": "papwiki"
+  },
+  {
+    "dbname": "pcdwiki"
+  },
+  {
+    "dbname": "pcmwiki"
+  },
+  {
+    "dbname": "pdcwiki"
+  },
+  {
+    "dbname": "pflwiki"
+  },
+  {
+    "dbname": "piwiki"
+  },
+  {
+    "dbname": "piwiktionary"
+  },
+  {
+    "dbname": "pihwiki"
+  },
+  {
+    "dbname": "plwiki"
+  },
+  {
+    "dbname": "plwiktionary"
+  },
+  {
+    "dbname": "plwikibooks"
+  },
+  {
+    "dbname": "plwikinews"
+  },
+  {
+    "dbname": "plwikiquote"
+  },
+  {
+    "dbname": "plwikisource"
+  },
+  {
+    "dbname": "plwikivoyage"
+  },
+  {
+    "dbname": "pmswiki"
+  },
+  {
+    "dbname": "pmswikisource"
+  },
+  {
+    "dbname": "pnbwiki"
+  },
+  {
+    "dbname": "pnbwiktionary"
+  },
+  {
+    "dbname": "pntwiki"
+  },
+  {
+    "dbname": "pswiki"
+  },
+  {
+    "dbname": "pswiktionary"
+  },
+  {
+    "dbname": "pswikibooks"
+  },
+  {
+    "dbname": "pswikivoyage"
+  },
+  {
+    "dbname": "ptwiki"
+  },
+  {
+    "dbname": "ptwiktionary"
+  },
+  {
+    "dbname": "ptwikibooks"
+  },
+  {
+    "dbname": "ptwikinews"
+  },
+  {
+    "dbname": "ptwikiquote"
+  },
+  {
+    "dbname": "ptwikisource"
+  },
+  {
+    "dbname": "ptwikiversity"
+  },
+  {
+    "dbname": "ptwikivoyage"
+  },
+  {
+    "dbname": "pwnwiki"
+  },
+  {
+    "dbname": "quwiki"
+  },
+  {
+    "dbname": "quwiktionary"
+  },
+  {
+    "dbname": "quwikibooks"
+  },
+  {
+    "dbname": "quwikiquote"
+  },
+  {
+    "dbname": "rmwiki"
+  },
+  {
+    "dbname": "rmwiktionary"
+  },
+  {
+    "dbname": "rmwikibooks"
+  },
+  {
+    "dbname": "rmywiki"
+  },
+  {
+    "dbname": "rnwiki"
+  },
+  {
+    "dbname": "rnwiktionary"
+  },
+  {
+    "dbname": "rowiki"
+  },
+  {
+    "dbname": "rowiktionary"
+  },
+  {
+    "dbname": "rowikibooks"
+  },
+  {
+    "dbname": "rowikinews"
+  },
+  {
+    "dbname": "rowikiquote"
+  },
+  {
+    "dbname": "rowikisource"
+  },
+  {
+    "dbname": "rowikivoyage"
+  },
+  {
+    "dbname": "roa_tarawiki"
+  },
+  {
+    "dbname": "rskwiki"
+  },
+  {
+    "dbname": "ruwiki"
+  },
+  {
+    "dbname": "ruwiktionary"
+  },
+  {
+    "dbname": "ruwikibooks"
+  },
+  {
+    "dbname": "ruwikinews"
+  },
+  {
+    "dbname": "ruwikiquote"
+  },
+  {
+    "dbname": "ruwikisource"
+  },
+  {
+    "dbname": "ruwikiversity"
+  },
+  {
+    "dbname": "ruwikivoyage"
+  },
+  {
+    "dbname": "ruewiki"
+  },
+  {
+    "dbname": "roa_rupwiki"
+  },
+  {
+    "dbname": "roa_rupwiktionary"
+  },
+  {
+    "dbname": "rwwiki"
+  },
+  {
+    "dbname": "rwwiktionary"
+  },
+  {
+    "dbname": "sawiki"
+  },
+  {
+    "dbname": "sawiktionary"
+  },
+  {
+    "dbname": "sawikibooks"
+  },
+  {
+    "dbname": "sawikiquote"
+  },
+  {
+    "dbname": "sawikisource"
+  },
+  {
+    "dbname": "sahwiki"
+  },
+  {
+    "dbname": "sahwikiquote"
+  },
+  {
+    "dbname": "sahwikisource"
+  },
+  {
+    "dbname": "satwiki"
+  },
+  {
+    "dbname": "satwiktionary"
+  },
+  {
+    "dbname": "scwiki"
+  },
+  {
+    "dbname": "scwiktionary"
+  },
+  {
+    "dbname": "scnwiki"
+  },
+  {
+    "dbname": "scnwiktionary"
+  },
+  {
+    "dbname": "scowiki"
+  },
+  {
+    "dbname": "sdwiki"
+  },
+  {
+    "dbname": "sdwiktionary"
+  },
+  {
+    "dbname": "sdwikinews"
+  },
+  {
+    "dbname": "sewiki"
+  },
+  {
+    "dbname": "sewikibooks"
+  },
+  {
+    "dbname": "sgwiki"
+  },
+  {
+    "dbname": "sgwiktionary"
+  },
+  {
+    "dbname": "bat_smgwiki"
+  },
+  {
+    "dbname": "shwiki"
+  },
+  {
+    "dbname": "shwiktionary"
+  },
+  {
+    "dbname": "shiwiki"
+  },
+  {
+    "dbname": "shnwiki"
+  },
+  {
+    "dbname": "shnwiktionary"
+  },
+  {
+    "dbname": "shnwikibooks"
+  },
+  {
+    "dbname": "shnwikinews"
+  },
+  {
+    "dbname": "shnwikivoyage"
+  },
+  {
+    "dbname": "shywiktionary"
+  },
+  {
+    "dbname": "siwiki"
+  },
+  {
+    "dbname": "siwiktionary"
+  },
+  {
+    "dbname": "siwikibooks"
+  },
+  {
+    "dbname": "simplewiki"
+  },
+  {
+    "dbname": "simplewiktionary"
+  },
+  {
+    "dbname": "simplewikibooks"
+  },
+  {
+    "dbname": "simplewikiquote"
+  },
+  {
+    "dbname": "skwiki"
+  },
+  {
+    "dbname": "skwiktionary"
+  },
+  {
+    "dbname": "skwikibooks"
+  },
+  {
+    "dbname": "skwikiquote"
+  },
+  {
+    "dbname": "skwikisource"
+  },
+  {
+    "dbname": "skrwiki"
+  },
+  {
+    "dbname": "skrwiktionary"
+  },
+  {
+    "dbname": "slwiki"
+  },
+  {
+    "dbname": "slwiktionary"
+  },
+  {
+    "dbname": "slwikibooks"
+  },
+  {
+    "dbname": "slwikiquote"
+  },
+  {
+    "dbname": "slwikisource"
+  },
+  {
+    "dbname": "slwikiversity"
+  },
+  {
+    "dbname": "smwiki"
+  },
+  {
+    "dbname": "smwiktionary"
+  },
+  {
+    "dbname": "smnwiki"
+  },
+  {
+    "dbname": "snwiki"
+  },
+  {
+    "dbname": "snwiktionary"
+  },
+  {
+    "dbname": "sowiki"
+  },
+  {
+    "dbname": "sowiktionary"
+  },
+  {
+    "dbname": "sqwiki"
+  },
+  {
+    "dbname": "sqwiktionary"
+  },
+  {
+    "dbname": "sqwikibooks"
+  },
+  {
+    "dbname": "sqwikinews"
+  },
+  {
+    "dbname": "sqwikiquote"
+  },
+  {
+    "dbname": "srwiki"
+  },
+  {
+    "dbname": "srwiktionary"
+  },
+  {
+    "dbname": "srwikibooks"
+  },
+  {
+    "dbname": "srwikinews"
+  },
+  {
+    "dbname": "srwikiquote"
+  },
+  {
+    "dbname": "srwikisource"
+  },
+  {
+    "dbname": "srnwiki"
+  },
+  {
+    "dbname": "sswiki"
+  },
+  {
+    "dbname": "sswiktionary"
+  },
+  {
+    "dbname": "stwiki"
+  },
+  {
+    "dbname": "stwiktionary"
+  },
+  {
+    "dbname": "stqwiki"
+  },
+  {
+    "dbname": "suwiki"
+  },
+  {
+    "dbname": "suwiktionary"
+  },
+  {
+    "dbname": "suwikibooks"
+  },
+  {
+    "dbname": "suwikiquote"
+  },
+  {
+    "dbname": "suwikisource"
+  },
+  {
+    "dbname": "svwiki"
+  },
+  {
+    "dbname": "svwiktionary"
+  },
+  {
+    "dbname": "svwikibooks"
+  },
+  {
+    "dbname": "svwikinews"
+  },
+  {
+    "dbname": "svwikiquote"
+  },
+  {
+    "dbname": "svwikisource"
+  },
+  {
+    "dbname": "svwikiversity"
+  },
+  {
+    "dbname": "svwikivoyage"
+  },
+  {
+    "dbname": "swwiki"
+  },
+  {
+    "dbname": "swwiktionary"
+  },
+  {
+    "dbname": "swwikibooks"
+  },
+  {
+    "dbname": "sylwiki"
+  },
+  {
+    "dbname": "szlwiki"
+  },
+  {
+    "dbname": "szywiki"
+  },
+  {
+    "dbname": "tawiki"
+  },
+  {
+    "dbname": "tawiktionary"
+  },
+  {
+    "dbname": "tawikibooks"
+  },
+  {
+    "dbname": "tawikinews"
+  },
+  {
+    "dbname": "tawikiquote"
+  },
+  {
+    "dbname": "tawikisource"
+  },
+  {
+    "dbname": "taywiki"
+  },
+  {
+    "dbname": "tcywiki"
+  },
+  {
+    "dbname": "tcywiktionary"
+  },
+  {
+    "dbname": "tcywikisource"
+  },
+  {
+    "dbname": "tddwiki"
+  },
+  {
+    "dbname": "tewiki"
+  },
+  {
+    "dbname": "tewiktionary"
+  },
+  {
+    "dbname": "tewikibooks"
+  },
+  {
+    "dbname": "tewikiquote"
+  },
+  {
+    "dbname": "tewikisource"
+  },
+  {
+    "dbname": "tetwiki"
+  },
+  {
+    "dbname": "tgwiki"
+  },
+  {
+    "dbname": "tgwiktionary"
+  },
+  {
+    "dbname": "tgwikibooks"
+  },
+  {
+    "dbname": "thwiki"
+  },
+  {
+    "dbname": "thwiktionary"
+  },
+  {
+    "dbname": "thwikibooks"
+  },
+  {
+    "dbname": "thwikinews"
+  },
+  {
+    "dbname": "thwikiquote"
+  },
+  {
+    "dbname": "thwikisource"
+  },
+  {
+    "dbname": "tiwiki"
+  },
+  {
+    "dbname": "tiwiktionary"
+  },
+  {
+    "dbname": "tigwiki"
+  },
+  {
+    "dbname": "tkwiki"
+  },
+  {
+    "dbname": "tkwiktionary"
+  },
+  {
+    "dbname": "tkwikibooks"
+  },
+  {
+    "dbname": "tkwikiquote"
+  },
+  {
+    "dbname": "tlwiki"
+  },
+  {
+    "dbname": "tlwiktionary"
+  },
+  {
+    "dbname": "tlwikibooks"
+  },
+  {
+    "dbname": "tlwikiquote"
+  },
+  {
+    "dbname": "tlywiki"
+  },
+  {
+    "dbname": "tnwiki"
+  },
+  {
+    "dbname": "tnwiktionary"
+  },
+  {
+    "dbname": "towiki"
+  },
+  {
+    "dbname": "towiktionary"
+  },
+  {
+    "dbname": "tpiwiki"
+  },
+  {
+    "dbname": "tpiwiktionary"
+  },
+  {
+    "dbname": "trwiki"
+  },
+  {
+    "dbname": "trwiktionary"
+  },
+  {
+    "dbname": "trwikibooks"
+  },
+  {
+    "dbname": "trwikinews"
+  },
+  {
+    "dbname": "trwikiquote"
+  },
+  {
+    "dbname": "trwikisource"
+  },
+  {
+    "dbname": "trwikivoyage"
+  },
+  {
+    "dbname": "trvwiki"
+  },
+  {
+    "dbname": "tswiki"
+  },
+  {
+    "dbname": "tswiktionary"
+  },
+  {
+    "dbname": "ttwiki"
+  },
+  {
+    "dbname": "ttwiktionary"
+  },
+  {
+    "dbname": "ttwikibooks"
+  },
+  {
+    "dbname": "ttwikiquote"
+  },
+  {
+    "dbname": "tumwiki"
+  },
+  {
+    "dbname": "twwiki"
+  },
+  {
+    "dbname": "twwiktionary"
+  },
+  {
+    "dbname": "tywiki"
+  },
+  {
+    "dbname": "tyvwiki"
+  },
+  {
+    "dbname": "udmwiki"
+  },
+  {
+    "dbname": "ugwiki"
+  },
+  {
+    "dbname": "ugwiktionary"
+  },
+  {
+    "dbname": "ugwikibooks"
+  },
+  {
+    "dbname": "ugwikiquote"
+  },
+  {
+    "dbname": "ukwiki"
+  },
+  {
+    "dbname": "ukwiktionary"
+  },
+  {
+    "dbname": "ukwikibooks"
+  },
+  {
+    "dbname": "ukwikinews"
+  },
+  {
+    "dbname": "ukwikiquote"
+  },
+  {
+    "dbname": "ukwikisource"
+  },
+  {
+    "dbname": "ukwikivoyage"
+  },
+  {
+    "dbname": "urwiki"
+  },
+  {
+    "dbname": "urwiktionary"
+  },
+  {
+    "dbname": "urwikibooks"
+  },
+  {
+    "dbname": "urwikiquote"
+  },
+  {
+    "dbname": "uzwiki"
+  },
+  {
+    "dbname": "uzwiktionary"
+  },
+  {
+    "dbname": "uzwikibooks"
+  },
+  {
+    "dbname": "uzwikiquote"
+  },
+  {
+    "dbname": "vewiki"
+  },
+  {
+    "dbname": "vecwiki"
+  },
+  {
+    "dbname": "vecwiktionary"
+  },
+  {
+    "dbname": "vecwikisource"
+  },
+  {
+    "dbname": "vepwiki"
+  },
+  {
+    "dbname": "viwiki"
+  },
+  {
+    "dbname": "viwiktionary"
+  },
+  {
+    "dbname": "viwikibooks"
+  },
+  {
+    "dbname": "viwikiquote"
+  },
+  {
+    "dbname": "viwikisource"
+  },
+  {
+    "dbname": "viwikivoyage"
+  },
+  {
+    "dbname": "vlswiki"
+  },
+  {
+    "dbname": "vowiki"
+  },
+  {
+    "dbname": "vowiktionary"
+  },
+  {
+    "dbname": "vowikibooks"
+  },
+  {
+    "dbname": "vowikiquote"
+  },
+  {
+    "dbname": "fiu_vrowiki"
+  },
+  {
+    "dbname": "wawiki"
+  },
+  {
+    "dbname": "wawiktionary"
+  },
+  {
+    "dbname": "wawikibooks"
+  },
+  {
+    "dbname": "wawikisource"
+  },
+  {
+    "dbname": "warwiki"
+  },
+  {
+    "dbname": "wowiki"
+  },
+  {
+    "dbname": "wowiktionary"
+  },
+  {
+    "dbname": "wowikiquote"
+  },
+  {
+    "dbname": "wuuwiki"
+  },
+  {
+    "dbname": "xalwiki"
+  },
+  {
+    "dbname": "xhwiki"
+  },
+  {
+    "dbname": "xhwiktionary"
+  },
+  {
+    "dbname": "xhwikibooks"
+  },
+  {
+    "dbname": "xmfwiki"
+  },
+  {
+    "dbname": "yiwiki"
+  },
+  {
+    "dbname": "yiwiktionary"
+  },
+  {
+    "dbname": "yiwikisource"
+  },
+  {
+    "dbname": "yowiki"
+  },
+  {
+    "dbname": "yowiktionary"
+  },
+  {
+    "dbname": "yowikibooks"
+  },
+  {
+    "dbname": "zh_yuewiki"
+  },
+  {
+    "dbname": "yuewiktionary"
+  },
+  {
+    "dbname": "zawiki"
+  },
+  {
+    "dbname": "zawiktionary"
+  },
+  {
+    "dbname": "zawikibooks"
+  },
+  {
+    "dbname": "zawikiquote"
+  },
+  {
+    "dbname": "zeawiki"
+  },
+  {
+    "dbname": "zghwiki"
+  },
+  {
+    "dbname": "zhwiki"
+  },
+  {
+    "dbname": "zhwiktionary"
+  },
+  {
+    "dbname": "zhwikibooks"
+  },
+  {
+    "dbname": "zhwikinews"
+  },
+  {
+    "dbname": "zhwikiquote"
+  },
+  {
+    "dbname": "zhwikisource"
+  },
+  {
+    "dbname": "zhwikiversity"
+  },
+  {
+    "dbname": "zhwikivoyage"
+  },
+  {
+    "dbname": "zuwiki"
+  },
+  {
+    "dbname": "zuwiktionary"
+  },
+  {
+    "dbname": "zuwikibooks"
+  },
+  {
+    "dbname": "advisorswiki"
+  },
+  {
+    "dbname": "advisorywiki"
+  },
+  {
+    "dbname": "aewikimedia"
+  },
+  {
+    "dbname": "amwikimedia"
+  },
+  {
+    "dbname": "apiportalwiki"
+  },
+  {
+    "dbname": "arwikimedia"
+  },
+  {
+    "dbname": "arbcom_cswiki"
+  },
+  {
+    "dbname": "arbcom_dewiki"
+  },
+  {
+    "dbname": "arbcom_enwiki"
+  },
+  {
+    "dbname": "arbcom_fiwiki"
+  },
+  {
+    "dbname": "arbcom_itwiki"
+  },
+  {
+    "dbname": "arbcom_nlwiki"
+  },
+  {
+    "dbname": "arbcom_ruwiki"
+  },
+  {
+    "dbname": "arbcom_zhwiki"
+  },
+  {
+    "dbname": "auditcomwiki"
+  },
+  {
+    "dbname": "azwikimedia"
+  },
+  {
+    "dbname": "bdwikimedia"
+  },
+  {
+    "dbname": "bewikimedia"
+  },
+  {
+    "dbname": "betawikiversity"
+  },
+  {
+    "dbname": "boardwiki"
+  },
+  {
+    "dbname": "boardgovcomwiki"
+  },
+  {
+    "dbname": "brwikimedia"
+  },
+  {
+    "dbname": "cawikimedia"
+  },
+  {
+    "dbname": "chairwiki"
+  },
+  {
+    "dbname": "chapcomwiki"
+  },
+  {
+    "dbname": "checkuserwiki"
+  },
+  {
+    "dbname": "cnwikimedia"
+  },
+  {
+    "dbname": "cowikimedia"
+  },
+  {
+    "dbname": "collabwiki"
+  },
+  {
+    "dbname": "commonswiki"
+  },
+  {
+    "dbname": "dkwikimedia"
+  },
+  {
+    "dbname": "donatewiki"
+  },
+  {
+    "dbname": "ecwikimedia"
+  },
+  {
+    "dbname": "electcomwiki"
+  },
+  {
+    "dbname": "etwikimedia"
+  },
+  {
+    "dbname": "execwiki"
+  },
+  {
+    "dbname": "fdcwiki"
+  },
+  {
+    "dbname": "fiwikimedia"
+  },
+  {
+    "dbname": "foundationwiki"
+  },
+  {
+    "dbname": "gewikimedia"
+  },
+  {
+    "dbname": "grwikimedia"
+  },
+  {
+    "dbname": "grantswiki"
+  },
+  {
+    "dbname": "hiwikimedia"
+  },
+  {
+    "dbname": "idwikimedia"
+  },
+  {
+    "dbname": "id_internalwikimedia"
+  },
+  {
+    "dbname": "iegcomwiki"
+  },
+  {
+    "dbname": "ilwikimedia"
+  },
+  {
+    "dbname": "incubatorwiki"
+  },
+  {
+    "dbname": "internalwiki"
+  },
+  {
+    "dbname": "labswiki"
+  },
+  {
+    "dbname": "legalteamwiki"
+  },
+  {
+    "dbname": "loginwiki"
+  },
+  {
+    "dbname": "maiwikimedia"
+  },
+  {
+    "dbname": "mediawikiwiki"
+  },
+  {
+    "dbname": "metawiki"
+  },
+  {
+    "dbname": "mkwikimedia"
+  },
+  {
+    "dbname": "movementroleswiki"
+  },
+  {
+    "dbname": "mxwikimedia"
+  },
+  {
+    "dbname": "ngwikimedia"
+  },
+  {
+    "dbname": "nlwikimedia"
+  },
+  {
+    "dbname": "nowikimedia"
+  },
+  {
+    "dbname": "noboard_chapterswikimedia"
+  },
+  {
+    "dbname": "nostalgiawiki"
+  },
+  {
+    "dbname": "nycwikimedia"
+  },
+  {
+    "dbname": "nzwikimedia"
+  },
+  {
+    "dbname": "officewiki"
+  },
+  {
+    "dbname": "ombudsmenwiki"
+  },
+  {
+    "dbname": "otrs_wikiwiki"
+  },
+  {
+    "dbname": "outreachwiki"
+  },
+  {
+    "dbname": "pa_uswikimedia"
+  },
+  {
+    "dbname": "plwikimedia"
+  },
+  {
+    "dbname": "projectcomwiki"
+  },
+  {
+    "dbname": "ptwikimedia"
+  },
+  {
+    "dbname": "punjabiwikimedia"
+  },
+  {
+    "dbname": "qualitywiki"
+  },
+  {
+    "dbname": "romdwikimedia"
+  },
+  {
+    "dbname": "rswikimedia"
+  },
+  {
+    "dbname": "ruwikimedia"
+  },
+  {
+    "dbname": "sewikimedia"
+  },
+  {
+    "dbname": "searchcomwiki"
+  },
+  {
+    "dbname": "sourceswiki"
+  },
+  {
+    "dbname": "spcomwiki"
+  },
+  {
+    "dbname": "specieswiki"
+  },
+  {
+    "dbname": "stewardwiki"
+  },
+  {
+    "dbname": "strategywiki"
+  },
+  {
+    "dbname": "sysop_itwiki"
+  },
+  {
+    "dbname": "sysop_plwiki"
+  },
+  {
+    "dbname": "techconductwiki"
+  },
+  {
+    "dbname": "tenwiki"
+  },
+  {
+    "dbname": "testwiki"
+  },
+  {
+    "dbname": "test2wiki"
+  },
+  {
+    "dbname": "testcommonswiki"
+  },
+  {
+    "dbname": "testwikidatawiki"
+  },
+  {
+    "dbname": "thankyouwiki"
+  },
+  {
+    "dbname": "trwikimedia"
+  },
+  {
+    "dbname": "transitionteamwiki"
+  },
+  {
+    "dbname": "u4cwiki"
+  },
+  {
+    "dbname": "uawikimedia"
+  },
+  {
+    "dbname": "usabilitywiki"
+  },
+  {
+    "dbname": "vewikimedia"
+  },
+  {
+    "dbname": "votewiki"
+  },
+  {
+    "dbname": "wbwikimedia"
+  },
+  {
+    "dbname": "wg_enwiki"
+  },
+  {
+    "dbname": "wikidatawiki"
+  },
+  {
+    "dbname": "wikifunctionswiki"
+  },
+  {
+    "dbname": "wikimaniawiki"
+  },
+  {
+    "dbname": "wikimania2005wiki"
+  },
+  {
+    "dbname": "wikimania2006wiki"
+  },
+  {
+    "dbname": "wikimania2007wiki"
+  },
+  {
+    "dbname": "wikimania2008wiki"
+  },
+  {
+    "dbname": "wikimania2009wiki"
+  },
+  {
+    "dbname": "wikimania2010wiki"
+  },
+  {
+    "dbname": "wikimania2011wiki"
+  },
+  {
+    "dbname": "wikimania2012wiki"
+  },
+  {
+    "dbname": "wikimania2013wiki"
+  },
+  {
+    "dbname": "wikimania2014wiki"
+  },
+  {
+    "dbname": "wikimania2015wiki"
+  },
+  {
+    "dbname": "wikimania2016wiki"
+  },
+  {
+    "dbname": "wikimania2017wiki"
+  },
+  {
+    "dbname": "wikimania2018wiki"
+  },
+  {
+    "dbname": "wikimaniateamwiki"
+  }
+]
