@@ -1,45 +1,18 @@
-WITH
-  monthly_user_edits AS (
+WITH monthly_user_edits AS (
     SELECT
-      DATE_FORMAT(
-        STR_TO_DATE(rev_timestamp, '%Y%m%d%H%i%S'),
-        '%Y-%m'
-      )             AS ym,
-      rev_actor     AS actor_id,
-      COUNT(*)      AS edits
-    FROM revision
-    GROUP BY ym, actor_id
-    HAVING edits >= 15
-  ),
-
-  monthly_active_users AS (
-    SELECT
-      ym,
-      COUNT(*)      AS active_users
-    FROM monthly_user_edits
-    GROUP BY ym
-  ),
-
-  filtered_months AS (
-    SELECT
-      ym,
-      active_users,
-      ROW_NUMBER() OVER (ORDER BY ym)
-        - ROW_NUMBER() OVER (
-            PARTITION BY (active_users >= 4)
-            ORDER BY ym
-          )         AS grp
-    FROM monthly_active_users
-    WHERE active_users >= 4
-  ),
-
-  consecutive_runs AS (
-    SELECT
-      COUNT(*)      AS run_length
-    FROM filtered_months
-    GROUP BY grp
-    HAVING run_length >= 4
-  )
+        DATE_FORMAT(STR_TO_DATE(rev.rev_timestamp, '%Y%m%d%H%i%S'), '%Y-%m') AS edit_month,
+        rev.rev_actor AS actor_id,
+        COUNT(*) AS edit_count
+    FROM revision AS rev
+    WHERE rev.rev_timestamp >= DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 4 MONTH), '%Y%m%d%H%i%S')
+    GROUP BY edit_month, actor_id
+    HAVING edit_count >= 15
+)
 
 SELECT
-  EXISTS(SELECT 1 FROM consecutive_runs) AS meets_threshold;
+    actor.actor_name AS username,
+    mue.edit_month,
+    mue.edit_count
+FROM monthly_user_edits AS mue
+JOIN actor ON mue.actor_id = actor.actor_id
+ORDER BY mue.edit_month DESC, mue.edit_count DESC;
