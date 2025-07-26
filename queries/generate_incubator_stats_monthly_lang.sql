@@ -1,6 +1,11 @@
 WITH base AS (
     SELECT
+        rev.rev_id,
         rev.rev_timestamp,
+        SUBSTRING_INDEX(
+          REGEXP_SUBSTR(page.page_title, 'W[a-z]/[a-z]+'),
+          'W[a-z]/', 1
+        ) AS project_code,
         SUBSTRING_INDEX(
           REGEXP_SUBSTR(page.page_title, 'W[a-z]/[a-z]+'),
           '/', -1
@@ -27,7 +32,7 @@ monthly_edits AS (
         DATE_FORMAT(rev_timestamp, '%Y-%m-01') AS month_start,
         language_code,
         actor_id,
-        COUNT(*) AS edits_in_month
+        COUNT(DISTINCT rev_id) AS edits_in_month
     FROM base
     GROUP BY month_start, language_code, actor_id
 ),
@@ -43,9 +48,18 @@ monthly_active AS (
 )
 
 SELECT
-    DATE_FORMAT(month_start, '%m/%Y') AS month_year,
-    language_code AS lang,
-    monthly_active_editors_min5 AS editors_gte_5,
-    monthly_active_editors_min15 AS editors_gte_15
+    month_start,
+    CASE project_code
+      WHEN 'Wp' THEN 'wikipedia'
+      WHEN 'Wq' THEN 'wikiquote'
+      WHEN 'Wt' THEN 'wiktionary'
+      WHEN 'Wy' THEN 'wikivoyage'
+      WHEN 'Wb' THEN 'wikibooks'
+      WHEN 'Wn' THEN 'wikinews'
+      ELSE 'unknown'
+    END AS project,
+    language_code,
+    monthly_active_editors_min5,
+    monthly_active_editors_min15
 FROM monthly_active
 ORDER BY month_start;

@@ -1,5 +1,6 @@
 CREATE TABLE IF NOT EXISTS incubator_active_editors_monthly (
-    first_day_date DATE COMMENT 'First day of the month (YYYY-MM-01)',
+    snapshot_month DATE COMMENT 'First day of the month (YYYY-MM-01)',
+    project VARCHAR(50) COMMENT 'Expanded project name (e.g., wikipedia).',
     language_code VARCHAR(10) COMMENT 'Language code (e.g. en, fr, etc.)',
     monthly_active_editors_min5 INT COMMENT 'Distinct editors with ≥5 edits in that month',
     monthly_active_editors_min15 INT COMMENT 'Distinct editors with ≥15 edits in that month',
