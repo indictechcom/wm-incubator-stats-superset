@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS incubator_stats_daily (
     created_page_count INT COMMENT 'Number of pages created that day (identified by rev_parent_id = 0).',
     bytes_added_30d BIGINT COMMENT 'Sum of bytes added across all edits for the day.',
     bytes_removed_30d BIGINT COMMENT 'Sum of bytes removed across all edits for the day.',
-    avg_monthly_active_editors DECIMAL(5,1) COMMENT 'Average number of active editors per month for the project.',
+    avg_monthly_active_editors INT COMMENT 'Average number of active editors per month for the project.',
 )
 ENGINE=InnoDB
 COMMENT='Daily stats of incubating projects on Wikimedia incubator.';
