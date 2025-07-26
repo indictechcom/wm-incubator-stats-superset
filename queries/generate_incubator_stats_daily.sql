@@ -44,6 +44,7 @@ daily_metrics AS (
 lang_code AS (
     SELECT REGEXP_SUBSTR(prefix, 'W[a-z]') AS project_code,
            SUBSTRING_INDEX(prefix, '/', -1) AS language_code,
+           prefix,
            rev_date,
            rev_count,
            editor_count,
