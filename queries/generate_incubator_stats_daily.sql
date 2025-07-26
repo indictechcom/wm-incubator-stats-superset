@@ -75,12 +75,27 @@ monthly_active AS (
      GROUP BY prefix, month_start
 ),
 
-avg_monthly_active AS (
+avg_active_windows AS (
     SELECT
         prefix,
-        ROUND(AVG(active_editors), 0) AS avg_monthly_active_editors
-      FROM monthly_active
-     GROUP BY prefix
+        ROUND(
+          AVG(
+            CASE 
+              WHEN month_start >= DATE_FORMAT(DATE_SUB(CURRENT_DATE, INTERVAL 3 MONTH), '%Y-%m-01') 
+              THEN active_editors 
+            END
+          )
+        , 0) AS avg_monthly_active_editors_3months,
+        ROUND(
+          AVG(
+            CASE 
+              WHEN month_start >= DATE_FORMAT(DATE_SUB(CURRENT_DATE, INTERVAL 6 MONTH), '%Y-%m-01') 
+              THEN active_editors 
+            END
+          )
+        , 0) AS avg_monthly_active_editors_6months
+    FROM monthly_active
+    GROUP BY prefix
 )
 
 SELECT DATE(CURRENT_TIME()) AS snapshot_date,
@@ -101,7 +116,8 @@ SELECT DATE(CURRENT_TIME()) AS snapshot_date,
        created_page_count,
        bytes_added_30d,
        bytes_removed_30d,
-       COALESCE(a.avg_monthly_active_editors, 0.0) AS avg_monthly_active_editors
-  FROM lang_code l
-  LEFT JOIN avg_monthly_active a
-    ON l.prefix = a.prefix;
+    COALESCE(w.avg_monthly_active_editors_3months, 0) AS avg_monthly_active_editors_3months,
+    COALESCE(w.avg_monthly_active_editors_6months, 0) AS avg_monthly_active_editors_6months
+FROM lang_code l
+LEFT JOIN avg_active_windows w
+  ON l.prefix = w.prefix;
