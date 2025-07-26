@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 def send_graduation_alert(
-    project_name: str,
+    project_type: str,
     language_code: str,
     active_users: int,
     edits: int,
@@ -24,7 +24,7 @@ def send_graduation_alert(
     when running on Toolforge and sending from a Toolforge address.
 
     Args:
-        project_name (str): The name of the project.
+        project_type (str): The type of the project.
         language_code (str): The language code of the project.
         active_users (int): The number of active users for the most recent month.
         edits (int): The number of edits for the most recent month.
@@ -37,11 +37,11 @@ def send_graduation_alert(
     Returns:
         bool: True if the email was sent successfully, False otherwise.
     """
-    subject = f"Project Graduation Alert: {project_name} ({language_code})"
+    subject = f"Wikimedia Incubator - Project potentially close to graduation: {project_type} ({language_code})"
     body = f"""
 Dear LangCom,
 
-This is an automated alert to inform you that the project for **{project_name} ({language_code})**
+This is an automated alert to inform you that the project for **{project_type} ({language_code})**
 appears to have met the minimum criteria for potential graduation from the Incubator.
 
 Based on recent metrics, the project has shown consistent activity:
@@ -67,17 +67,17 @@ Incubator Dashboard Alerts
             # --- IMPORTANT: No server.starttls() or server.login() needed for Toolforge outbound SMTP ---
             server.send_message(msg)
         logger.info(
-            f"Successfully sent graduation alert for '{project_name} ({language_code})' "
+            f"Successfully sent graduation alert for '{project_type} ({language_code})' "
             f"to {recipient_email} from {sender_email} using Toolforge SMTP."
         )
         return True
     except smtplib.SMTPException as e:
         logger.error(
-            f"SMTP error sending alert for '{project_name} ({language_code})' with Toolforge SMTP: {e}"
+            f"SMTP error sending alert for '{project_type} ({language_code})' with Toolforge SMTP: {e}"
         )
         return False
     except Exception as e:
         logger.error(
-            f"An unexpected error occurred while sending alert for '{project_name} ({language_code})' with Toolforge SMTP: {e}"
+            f"An unexpected error occurred while sending alert for '{project_type} ({language_code})' with Toolforge SMTP: {e}"
         )
         return False
