@@ -56,24 +56,9 @@ def fetch_graduation_candidates(dbname: str) -> pd.DataFrame:
         logging.error(f"Failed to fetch graduation candidates: {e}")
         raise
 
-def check_grad(df: pd.DataFrame) -> bool:
-    """Check if the dataframe meets the graduation criteria."""
-    df.sort_values(by="edit_month", ascending=False, inplace=True)
-    df.reset_index(drop=True, inplace=True)
-    monthly_users = df.groupby('edit_month')['username'].count()
-    last_4_months = monthly_users.index[-4:]
-    return all(monthly_users.loc[last_4_months] >= 4)
-
 def main():
-    with open('../static_data/dbnames.json', 'r') as f:
-        dbnames = json.load(f)
-    grad_projects = []
-    for dbname in dbnames:
-        project = dbname['dbname']
-        df = fetch_graduation_candidates(project)
-        if check_grad(df):
-            grad_projects.append(project)
-    print(grad_projects)
+    df = fetch_graduation_candidates("incubatorwiki")
+    print(df)
 
 if __name__ == "__main__":
     main()
