@@ -51,6 +51,34 @@ lang_code AS (
            bytes_added_30d,
            bytes_removed_30d
       FROM daily_metrics
+),
+
+actor_monthly_edits AS (
+    SELECT
+        prefix,
+        actor_id,
+        DATE_FORMAT(rev_timestamp, '%Y-%m-01') AS month_start,
+        COUNT(*) AS edits_in_month
+      FROM base
+     GROUP BY prefix, actor_id, month_start
+    HAVING COUNT(*) >= 5
+),
+
+monthly_active AS (
+    SELECT
+        prefix,
+        month_start,
+        COUNT(*) AS active_editors
+      FROM actor_monthly_edits
+     GROUP BY prefix, month_start
+),
+
+avg_monthly_active AS (
+    SELECT
+        prefix,
+        ROUND(AVG(active_editors), 1) AS avg_monthly_active_editors
+      FROM monthly_active
+     GROUP BY prefix
 )
 
 SELECT DATE(CURRENT_TIME()) AS snapshot_date,
@@ -70,5 +98,8 @@ SELECT DATE(CURRENT_TIME()) AS snapshot_date,
        edited_page_count,
        created_page_count,
        bytes_added_30d,
-       bytes_removed_30d
-  FROM lang_code;
+       bytes_removed_30d,
+       COALESCE(a.avg_monthly_active_editors, 0.0) AS avg_monthly_active_editors
+  FROM lang_code l
+  LEFT JOIN avg_monthly_active a
+    ON l.prefix = a.prefix;
