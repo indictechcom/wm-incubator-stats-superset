@@ -39,8 +39,7 @@ def get_query(url: str) -> str:
 def fetch_graduation_candidates(dbname: str) -> pd.DataFrame:
     """Fetch projects that meet graduation criteria."""
     try:
-        # query_url = "https://raw.githubusercontent.com/indictechcom/wm-incubator-stats-superset/refs/heads/main/queries/generate_graduation_alerts.sql"
-        query_url = "../queries/generate_graduation_alerts.sql" # TODO: Change to github url
+        query_url = "https://raw.githubusercontent.com/indictechcom/wm-incubator-stats-superset/refs/heads/main/queries/generate_graduation_alerts.sql"
         query = get_query(query_url)
         
         conn = forge.connect(dbname)
@@ -56,9 +55,13 @@ def fetch_graduation_candidates(dbname: str) -> pd.DataFrame:
         logging.error(f"Failed to fetch graduation candidates: {e}")
         raise
 
+def send_email(df):
+    pass # This function will include a function call to another function that will send emails to the LangCom mailing list
+
 def main():
     df = fetch_graduation_candidates("incubatorwiki")
-    print(df)
+    send_email(df)
+    
 
 if __name__ == "__main__":
     main()
