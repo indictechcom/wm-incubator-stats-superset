@@ -28,17 +28,16 @@ WITH base AS (
 ),
 
 daily_metrics AS (
-    SELECT
-        prefix,
-        rev_date,
-        COUNT(DISTINCT rev_id) AS rev_count,
-        COUNT(DISTINCT actor_id) AS editor_count,
-        COUNT(DISTINCT page_id) AS edited_page_count,
-        COUNT(DISTINCT CASE WHEN rev_parent_id = 0 THEN rev_id ELSE NULL END) AS created_page_count,
-        SUM(CASE WHEN byte_diff < 0 THEN byte_diff ELSE 0 END) AS bytes_removed_30d,
-        SUM(CASE WHEN byte_diff >= 0 THEN byte_diff ELSE 0 END) AS bytes_added_30d
-    FROM base
-    GROUP BY prefix, rev_date
+    SELECT base.prefix,
+           base.rev_date,
+           COUNT(DISTINCT base.rev_id) AS rev_count,
+           COUNT(DISTINCT base.actor_id) AS editor_count,
+           COUNT(DISTINCT base.page_id) AS edited_page_count,
+           COUNT(DISTINCT CASE WHEN base.rev_parent_id = 0 THEN base.rev_id ELSE NULL END) AS created_page_count,
+           SUM(CASE WHEN byte_diff < 0 THEN byte_diff ELSE 0 END) AS bytes_removed_30d,
+           SUM(CASE WHEN byte_diff >= 0 THEN byte_diff ELSE 0 END) AS bytes_added_30d
+      FROM base
+     GROUP BY base.prefix, base.rev_date
 ),
 
 lang_code AS (
@@ -60,17 +59,17 @@ actor_monthly_edits AS (
         prefix,
         actor_id,
         DATE_FORMAT(rev_timestamp, '%Y-%m-01') AS month_start,
-        COUNT(DISTINCT rev_id) AS edits_in_month
+        COUNT(*) AS edits_in_month
       FROM base
      GROUP BY prefix, actor_id, month_start
-    HAVING edits_in_month  >= 5
+    HAVING COUNT(*) >= 5
 ),
 
 monthly_active AS (
     SELECT
         prefix,
         month_start,
-        COUNT(DISTINCT actor_id) AS active_editors
+        COUNT(*) AS active_editors
       FROM actor_monthly_edits
      GROUP BY prefix, month_start
 ),
