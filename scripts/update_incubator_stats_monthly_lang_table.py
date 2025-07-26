@@ -6,43 +6,37 @@ import toolforge as forge
 import os
 import logging
 
-from utils import (
-    clear_destination_table,
-    update_destination_table,
-    sql_tuple
-)
+from utils import clear_destination_table, update_destination_table, sql_tuple
 
-log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs')
+log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "logs")
 os.makedirs(log_dir, exist_ok=True)
 
-log_file = os.path.join(log_dir, 'incubator_stats_daily.log')
+log_file = os.path.join(log_dir, "incubator_stats_daily.log")
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.FileHandler(log_file),
-        logging.StreamHandler()
-    ]
+    handlers=[logging.FileHandler(log_file), logging.StreamHandler()],
 )
 
 user_agent = forge.set_user_agent(
     tool="Wikimedia Incubator Superset Dashboard",
     email="kcvelaga@gmail.com",
 )
-destination_table = "incubator_stats_monthly_lang"
+destination_table = "incubator_active_editors_monthly"
 
-with open('../static_data/project_map.json', 'r', encoding='utf-8') as f:
+with open("../static_data/project_map.json", "r", encoding="utf-8") as f:
     project_map = json.load(f)
 
 project_map_r = {v: k for k, v in project_map.items()}
 
-with open('../static_data/exclude_users.json', 'r', encoding='utf-8') as f:
+with open("../static_data/exclude_users.json", "r", encoding="utf-8") as f:
     exclude_users = json.load(f)
+
 
 def construct_prefix(lang_code, db_group):
     project_code = project_map_r[db_group]
-    return f'{project_code}/{lang_code}'
+    return f"{project_code}/{lang_code}"
 
 
 def get_query(url):
@@ -51,15 +45,15 @@ def get_query(url):
 
 
 def get_canonical_data(db_groups_inscope):
-    cd_wikis = (
-        pd.read_csv("https://gitlab.wikimedia.org/repos/movement-insights/canonical-data/-/raw/main/wiki/wikis.tsv", sep='\t')
-        .query("""
+    cd_wikis = pd.read_csv(
+        "https://gitlab.wikimedia.org/repos/movement-insights/canonical-data/-/raw/main/wiki/wikis.tsv",
+        sep="\t",
+    ).query("""
             (visibility == 'public') \
             & (editability == 'public') \
             & (status == 'open') \
             & (database_group == @db_groups_inscope)
         """)
-    )
     return cd_wikis
 
 
@@ -77,14 +71,17 @@ def main():
 
     db_groups_inscope = list(project_map.values())
     cdw = get_canonical_data(db_groups_inscope)
-    cdw['prefix'] = cdw.apply(
-        lambda row: construct_prefix(row['language_code'], row['database_group']), axis=1
+    cdw["prefix"] = cdw.apply(
+        lambda row: construct_prefix(row["language_code"], row["database_group"]),
+        axis=1,
     )
-    excl_prefixes_sql = sql_tuple(cdw['prefix'].tolist())
-    excl_user_sql = sql_tuple(exclude_users['exclude'])
+    excl_prefixes_sql = sql_tuple(cdw["prefix"].tolist())
+    excl_user_sql = sql_tuple(exclude_users["exclude"])
 
     try:
-        query = get_query("https://raw.githubusercontent.com/indictechcom/wm-incubator-stats-superset/refs/heads/main/queries/generate_incubator_stats_monthly_lang.sql")
+        query = get_query(
+            "https://raw.githubusercontent.com/indictechcom/wm-incubator-stats-superset/refs/heads/main/queries/generate_incubator_active_editors_monthly.sql"
+        )
         logging.info("Query fetched successfully.")
     except Exception as e:
         logging.error(f"Query fetch failed: {e}")

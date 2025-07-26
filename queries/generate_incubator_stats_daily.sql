@@ -81,19 +81,19 @@ avg_active_windows AS (
         ROUND(
           AVG(
             CASE 
-              WHEN month_start >= DATE_FORMAT(DATE_SUB(CURRENT_DATE, INTERVAL 3 MONTH), '%Y-%m-01') 
+              WHEN month_start >= DATE_SUB(CURRENT_DATE, INTERVAL 3 MONTH)
               THEN active_editors 
             END
           )
-        , 0) AS avg_monthly_active_editors_3months,
+        , 0) AS avg_monthly_active_editors_3m,
         ROUND(
           AVG(
             CASE 
-              WHEN month_start >= DATE_FORMAT(DATE_SUB(CURRENT_DATE, INTERVAL 6 MONTH), '%Y-%m-01') 
+              WHEN month_start >= DATE_SUB(CURRENT_DATE, INTERVAL 6 MONTH)
               THEN active_editors 
             END
           )
-        , 0) AS avg_monthly_active_editors_6months
+        , 0) AS avg_monthly_active_editors_6m
     FROM monthly_active
     GROUP BY prefix
 )
@@ -116,8 +116,8 @@ SELECT DATE(CURRENT_TIME()) AS snapshot_date,
        created_page_count,
        bytes_added_30d,
        bytes_removed_30d,
-    COALESCE(w.avg_monthly_active_editors_3months, 0) AS avg_monthly_active_editors_3months,
-    COALESCE(w.avg_monthly_active_editors_6months, 0) AS avg_monthly_active_editors_6months
+    COALESCE(w.avg_monthly_active_editors_3m, 0) AS avg_monthly_active_editors_3m,
+    COALESCE(w.avg_monthly_active_editors_6m, 0) AS avg_monthly_active_editors_6m
 FROM lang_code l
 LEFT JOIN avg_active_windows w
   ON l.prefix = w.prefix;
