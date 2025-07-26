@@ -59,7 +59,7 @@ def send_email(df):
     pass # This function will include a function call to another function that will send emails to the LangCom mailing list
 
 def main():
-    df = fetch_graduation_candidates("incubatorwiki")
+    df = fetch_graduation_candidates("s56696__incubator_stats_daily_p")
     send_email(df)
     
 
