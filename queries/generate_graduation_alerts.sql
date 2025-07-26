@@ -1,11 +1,10 @@
 WITH monthly_stats AS (
   SELECT
-    DATE_TRUNC('month', snapshot_date)::DATE AS month,
+    DATE_TRUNC('month', month_start)::DATE AS month,
     project,
     language_code,
-    AVG(num_active_editors_monthly) AS avg_editors
-  FROM incubator_stats_daily
-  GROUP BY 1, 2, 3
+    monthly_active_editors_min15 AS active_editors
+  FROM incubator_active_editors_monthly
 ),
 qualified_months AS (
   SELECT
@@ -15,7 +14,7 @@ qualified_months AS (
     ROW_NUMBER() OVER (PARTITION BY project, language_code ORDER BY month) AS rn,
     EXTRACT(YEAR FROM month) * 12 + EXTRACT(MONTH FROM month) AS month_number
   FROM monthly_stats
-  WHERE avg_editors >= 4
+  WHERE active_editors >= 4
 ),
 consecutive_blocks AS (
   SELECT
@@ -33,6 +32,6 @@ grouped_consecutive AS (
   FROM consecutive_blocks
   GROUP BY project, language_code, group_id
 )
-SELECT DISTINCT project, language_code
+SELECT DISTINCT project, language_code, consecutive_months
 FROM grouped_consecutive
 WHERE consecutive_months >= 4;
