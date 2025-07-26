@@ -28,16 +28,17 @@ WITH base AS (
 ),
 
 daily_metrics AS (
-    SELECT base.prefix,
-           base.rev_date,
-           COUNT(DISTINCT base.rev_id) AS rev_count,
-           COUNT(DISTINCT base.actor_id) AS editor_count,
-           COUNT(DISTINCT base.page_id) AS edited_page_count,
-           COUNT(DISTINCT CASE WHEN base.rev_parent_id = 0 THEN base.rev_id ELSE NULL END) AS created_page_count,
-           SUM(CASE WHEN byte_diff < 0 THEN byte_diff ELSE 0 END) AS bytes_removed_30d,
-           SUM(CASE WHEN byte_diff >= 0 THEN byte_diff ELSE 0 END) AS bytes_added_30d
-      FROM base
-     GROUP BY base.prefix, base.rev_date
+    SELECT
+        prefix,
+        rev_date,
+        COUNT(DISTINCT rev_id) AS rev_count,
+        COUNT(DISTINCT actor_id) AS editor_count,
+        COUNT(DISTINCT page_id) AS edited_page_count,
+        COUNT(DISTINCT CASE WHEN rev_parent_id = 0 THEN rev_id ELSE NULL END) AS created_page_count,
+        SUM(CASE WHEN byte_diff < 0 THEN byte_diff ELSE 0 END) AS bytes_removed_30d,
+        SUM(CASE WHEN byte_diff >= 0 THEN byte_diff ELSE 0 END) AS bytes_added_30d
+    FROM base
+    GROUP BY prefix, rev_date
 ),
 
 lang_code AS (
@@ -51,6 +52,34 @@ lang_code AS (
            bytes_added_30d,
            bytes_removed_30d
       FROM daily_metrics
+),
+
+actor_monthly_edits AS (
+    SELECT
+        prefix,
+        actor_id,
+        DATE_FORMAT(rev_timestamp, '%Y-%m-01') AS month_start,
+        COUNT(DISTINCT rev_id) AS edits_in_month
+      FROM base
+     GROUP BY prefix, actor_id, month_start
+    HAVING edits_in_month  >= 5
+),
+
+monthly_active AS (
+    SELECT
+        prefix,
+        month_start,
+        COUNT(DISTINCT actor_id) AS active_editors
+      FROM actor_monthly_edits
+     GROUP BY prefix, month_start
+),
+
+avg_monthly_active AS (
+    SELECT
+        prefix,
+        ROUND(AVG(active_editors), 0) AS avg_monthly_active_editors
+      FROM monthly_active
+     GROUP BY prefix
 )
 
 SELECT DATE(CURRENT_TIME()) AS snapshot_date,
@@ -70,5 +99,8 @@ SELECT DATE(CURRENT_TIME()) AS snapshot_date,
        edited_page_count,
        created_page_count,
        bytes_added_30d,
-       bytes_removed_30d
-  FROM lang_code;
+       bytes_removed_30d,
+       COALESCE(a.avg_monthly_active_editors, 0.0) AS avg_monthly_active_editors
+  FROM lang_code l
+  LEFT JOIN avg_monthly_active a
+    ON l.prefix = a.prefix;
