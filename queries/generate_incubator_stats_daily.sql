@@ -79,20 +79,20 @@ avg_active_windows AS (
     SELECT
         prefix,
         ROUND(
-          AVG(
+          SUM(
             CASE 
               WHEN month_start >= DATE_SUB(CURRENT_DATE, INTERVAL 3 MONTH)
               THEN active_editors 
             END
-          )
+          ) / 3.0
         , 0) AS avg_monthly_active_editors_3m,
         ROUND(
-          AVG(
+          SUM(
             CASE 
               WHEN month_start >= DATE_SUB(CURRENT_DATE, INTERVAL 6 MONTH)
               THEN active_editors 
             END
-          )
+          ) / 6.0
         , 0) AS avg_monthly_active_editors_6m
     FROM monthly_active
     GROUP BY prefix
