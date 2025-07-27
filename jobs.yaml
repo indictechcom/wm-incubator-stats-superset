@@ -4,3 +4,10 @@
   schedule: "@daily"
   emails: onfailure
   retry: 3
+
+- command: /data/project/incubator-dashboard-db/www/python/src/scripts/fetch_project_user_stats.sh
+  image: python3.11
+  name: fetch-project-user-stats
+  schedule: "@monthly"
+  emails: onfailure
+  retry: 3
