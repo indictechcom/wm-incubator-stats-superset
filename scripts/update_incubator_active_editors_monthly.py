@@ -88,7 +88,10 @@ def main():
         return
 
     try:
-        df = fetch_data(query)
+        df = fetch_data(query.format(
+            EXCL_PREFIXES=excl_prefixes_sql,
+            EXCL_USERS=excl_user_sql
+        ))
         logging.info(f"Data fetched successfully.")
     except Exception as e:
         logging.error(f"Data fetch failed: {e}")

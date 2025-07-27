@@ -16,8 +16,7 @@ WITH base AS (
           user.user_name LIKE '%bot%'
           AND user.user_name LIKE '%Bot%'
       )
-      AND REGEXP_SUBSTR(page.page_title,'W[a-z]/[a-z]+')
-          NOT IN {EXCL_PREFIXES}
+      AND REGEXP_SUBSTR(page.page_title,'W[a-z]/[a-z]+') NOT IN {EXCL_PREFIXES}
 ),
 
 monthly_edits AS (
