@@ -24,7 +24,7 @@ def send_graduation_alert(
     Args:
         project_type (str): The type of the project.
         language_code (str): The language code of the project.
-        active_users (int): The average number of active users over the past 4 months.
+        active_users (int): The average number of monthly active users over the past 4 months.
         recipient_email (str): The email address of the recipient (e.g., langcom@lists.wikimedia.org or your Toolforge email).
         sender_email (str): The sender's email address (e.g., incubator-dashboard.alerts@toolforge.org).
         smtp_server (str): The SMTP server address. Default for Toolforge.
@@ -41,7 +41,7 @@ This is an automated alert to inform you that the project for **{project_type} (
 appears to have met the minimum criteria for potential graduation from the Incubator.
 
 Based on recent metrics, the project has shown consistent activity:
-- Average Active Users (last 4 months): {active_users}
+- Average Monthly Active Users (over the past 4 months): {active_users}
 
 Please review the project's status and consider it for graduation.
 
