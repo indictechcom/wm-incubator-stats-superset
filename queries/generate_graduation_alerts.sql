@@ -1,6 +1,6 @@
 WITH monthly_stats AS (
   SELECT
-    DATE_TRUNC('month', month_start)::DATE AS month,
+    DATE_FORMAT(snapshot_month, '%Y-%m-01') AS month,
     project,
     language_code,
     monthly_active_editors_min15 AS active_editors
@@ -12,7 +12,7 @@ qualified_months AS (
     language_code,
     month,
     ROW_NUMBER() OVER (PARTITION BY project, language_code ORDER BY month) AS rn,
-    EXTRACT(YEAR FROM month) * 12 + EXTRACT(MONTH FROM month) AS month_number
+    (YEAR(month) * 12 + MONTH(month)) AS month_number
   FROM monthly_stats
   WHERE active_editors >= 4
 ),
@@ -21,7 +21,9 @@ consecutive_blocks AS (
     project,
     language_code,
     month,
-    month_number - rn AS group_id
+    month_number,
+    rn,
+    (month_number - rn) AS group_id
   FROM qualified_months
 ),
 grouped_consecutive AS (
@@ -42,7 +44,7 @@ FROM grouped_consecutive gc
 JOIN consecutive_blocks cb
   ON gc.project = cb.project 
   AND gc.language_code = cb.language_code 
-  AND gc.group_id = cb.month_number - ROW_NUMBER() OVER (PARTITION BY cb.project, cb.language_code ORDER BY cb.month)
+  AND gc.group_id = cb.month_number - cb.rn
 JOIN monthly_stats ms
   ON cb.project = ms.project 
   AND cb.language_code = ms.language_code 
