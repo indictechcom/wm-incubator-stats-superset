@@ -17,14 +17,11 @@ from db_connector import get_graduating_projects
 from email_sender import send_graduation_alert
 
 # Configuration 
-# Define the recipient and sender emails
-# For testing, you MUST use a Toolforge/Wikimedia-related email to avoid relay errors
-# In production, it will be langcom@lists.wikimedia.org (configured via your .forward)
-RECIPIENT_EMAIL = "tools.incubator-dashboard@toolforge.org" # <--- IMPORTANT: SET THIS FOR TESTING!
-# OR use your personal Toolforge email, e.g., "your_wikitech_username@toolforge.org"
-SENDER_EMAIL = "incubator-dashboard.alerts@toolforge.org" # This is the "From" address for the tool
 
-# --- PRODUCTION LOGGING SETUP (from previous discussion) ---
+RECIPIENT_EMAIL = "langcom@lists.wikimedia.org" 
+
+SENDER_EMAIL = "incubator-dashboard.alerts@toolforge.org" 
+# PRODUCTION LOGGING SETUP 
 PROJECT_LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(current_script_dir)), 'logs')
 PROJECT_LOG_FILE = os.path.join(PROJECT_LOG_DIR, 'alerter_activity.log')
 
@@ -32,8 +29,8 @@ os.makedirs(PROJECT_LOG_DIR, exist_ok=True)
 
 file_handler = RotatingFileHandler(
     PROJECT_LOG_FILE,
-    maxBytes=10 * 1024 * 1024,  # 10 MB per log file
-    backupCount=5               # Keep up to 5 old log files
+    maxBytes=10 * 1024 * 1024, 
+    backupCount=5               
 )
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(formatter)
