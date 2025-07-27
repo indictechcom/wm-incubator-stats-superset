@@ -28,10 +28,24 @@ grouped_consecutive AS (
   SELECT
     project,
     language_code,
+    group_id,
     COUNT(*) AS consecutive_months
   FROM consecutive_blocks
   GROUP BY project, language_code, group_id
 )
-SELECT DISTINCT project, language_code, consecutive_months
-FROM grouped_consecutive
-WHERE consecutive_months >= 4;
+SELECT 
+  gc.project, 
+  gc.language_code, 
+  gc.consecutive_months,
+  MAX(ms.active_editors) AS active_editors
+FROM grouped_consecutive gc
+JOIN consecutive_blocks cb
+  ON gc.project = cb.project 
+  AND gc.language_code = cb.language_code 
+  AND gc.group_id = cb.month_number - ROW_NUMBER() OVER (PARTITION BY cb.project, cb.language_code ORDER BY cb.month)
+JOIN monthly_stats ms
+  ON cb.project = ms.project 
+  AND cb.language_code = ms.language_code 
+  AND cb.month = ms.month
+WHERE gc.consecutive_months >= 4
+GROUP BY gc.project, gc.language_code, gc.consecutive_months;

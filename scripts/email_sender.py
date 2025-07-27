@@ -10,8 +10,7 @@ def send_graduation_alert(
     project_type: str,
     language_code: str,
     active_users: int,
-    edits: int,
-    consecutive_months_met_criteria: int,
+    consecutive_months_met_criteria: str,
     recipient_email: str,
     sender_email: str,
     # --- Toolforge SMTP defaults  ---
@@ -27,7 +26,6 @@ def send_graduation_alert(
         project_type (str): The type of the project.
         language_code (str): The language code of the project.
         active_users (int): The number of active users for the most recent month.
-        edits (int): The number of edits for the most recent month.
         consecutive_months_met_criteria (int): Consecutive months criteria was met.
         recipient_email (str): The email address of the recipient (e.g., langcom@lists.wikimedia.org or your Toolforge email).
         sender_email (str): The sender's email address (e.g., incubator-dashboard.alerts@toolforge.org).
@@ -46,7 +44,6 @@ appears to have met the minimum criteria for potential graduation from the Incub
 
 Based on recent metrics, the project has shown consistent activity:
 - Active Users (last month): {active_users}
-- Edits (last month): {edits}
 - Consecutive Months Meeting Criteria (at least 4 active users with 15 edits): {consecutive_months_met_criteria}
 
 Please review the project's status and consider it for graduation.

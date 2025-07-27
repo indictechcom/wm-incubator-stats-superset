@@ -9,6 +9,8 @@ import pandas as pd
 import toolforge as forge
 import urllib.request
 import json
+from email_sender import send_graduation_alert
+
 # Setup logging
 log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs')
 os.makedirs(log_dir, exist_ok=True)
@@ -56,7 +58,15 @@ def fetch_graduation_candidates(dbname: str) -> pd.DataFrame:
         raise
 
 def send_email(df):
-    pass # This function will include a function call to another function that will send emails to the LangCom mailing list
+    for _, row in df.iterrows():
+        send_graduation_alert(
+            project_type=row['project'],
+            language_code=row['language_code'],
+            active_users=row['active_editors'],
+            consecutive_months_met_criteria='Yes',
+            sender_email='tools.incubator-dashboard@toolforge.org',
+            recipient_email='langcom@lists.wikimedia.org'
+        )
 
 def main():
     df = fetch_graduation_candidates("s56696__incubator_stats_daily_p")
