@@ -1,4 +1,4 @@
-WITH last_4_months AS (
+WITH filtered_4_months AS (
   SELECT
     project,
     language_code,
@@ -12,29 +12,12 @@ WITH last_4_months AS (
     DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 3 MONTH), '%Y-%m-01'),
     DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 4 MONTH), '%Y-%m-01')
   )
-),
-qualified_projects AS (
-  SELECT
-    project,
-    language_code,
-    COUNT(*) AS qualified_months
-  FROM last_4_months
-  GROUP BY project, language_code
-  HAVING qualified_months = 4
-),
-last_month_editors AS (
-  SELECT
-    project,
-    language_code,
-    active_editors AS last_month_editors
-  FROM last_4_months
-  WHERE snapshot_month = DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 MONTH), '%Y-%m-01')
 )
-SELECT 
-  qp.project,
-  qp.language_code,
-  lme.last_month_editors
-FROM qualified_projects qp
-JOIN last_month_editors lme
-  ON qp.project = lme.project AND qp.language_code = lme.language_code
-ORDER BY qp.project, qp.language_code;
+SELECT
+  project,
+  language_code,
+  ROUND(AVG(active_editors), 0) AS avg_active_editors
+FROM filtered_4_months
+GROUP BY project, language_code
+HAVING COUNT(*) = 4
+ORDER BY project, language_code;

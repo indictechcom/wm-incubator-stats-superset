@@ -62,8 +62,7 @@ def send_email(df):
         send_graduation_alert(
             project_type=row['project'],
             language_code=row['language_code'],
-            active_users=row['last_month_editors'],
-            consecutive_months_met_criteria='Yes',
+            active_users=row['avg_active_editors'],
             sender_email='tools.incubator-dashboard@toolforge.org',
             recipient_email='langcom@lists.wikimedia.org'
         )
