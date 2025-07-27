@@ -1,53 +1,28 @@
-WITH monthly_stats AS (
+WITH last_4_months AS (
   SELECT
-    DATE_FORMAT(snapshot_month, '%Y-%m-01') AS month,
     project,
     language_code,
+    snapshot_month,
     monthly_active_editors_min15 AS active_editors
   FROM incubator_active_editors_monthly
+  WHERE snapshot_month IN (
+    DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 MONTH), '%Y-%m-01'),
+    DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 2 MONTH), '%Y-%m-01'),
+    DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 3 MONTH), '%Y-%m-01'),
+    DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 4 MONTH), '%Y-%m-01')
+  ) AND monthly_active_editors_min15 >= 4
 ),
-qualified_months AS (
+qualified_projects AS (
   SELECT
     project,
     language_code,
-    month,
-    ROW_NUMBER() OVER (PARTITION BY project, language_code ORDER BY month) AS rn,
-    (YEAR(month) * 12 + MONTH(month)) AS month_number
-  FROM monthly_stats
-  WHERE active_editors >= 4
-),
-consecutive_blocks AS (
-  SELECT
-    project,
-    language_code,
-    month,
-    month_number,
-    rn,
-    (month_number - rn) AS group_id
-  FROM qualified_months
-),
-grouped_consecutive AS (
-  SELECT
-    project,
-    language_code,
-    group_id,
-    COUNT(*) AS consecutive_months
-  FROM consecutive_blocks
-  GROUP BY project, language_code, group_id
+    COUNT(*) AS qualified_months
+  FROM last_4_months
+  GROUP BY project, language_code
+  HAVING qualified_months = 4
 )
 SELECT 
-  gc.project, 
-  gc.language_code, 
-  gc.consecutive_months,
-  MAX(ms.active_editors) AS active_editors
-FROM grouped_consecutive gc
-JOIN consecutive_blocks cb
-  ON gc.project = cb.project 
-  AND gc.language_code = cb.language_code 
-  AND gc.group_id = cb.month_number - cb.rn
-JOIN monthly_stats ms
-  ON cb.project = ms.project 
-  AND cb.language_code = ms.language_code 
-  AND cb.month = ms.month
-WHERE gc.consecutive_months >= 4
-GROUP BY gc.project, gc.language_code, gc.consecutive_months;
+  project,
+  language_code
+FROM qualified_projects
+ORDER BY project, language_code;
