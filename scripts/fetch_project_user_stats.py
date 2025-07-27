@@ -24,6 +24,7 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+logger = logging.getLogger(__name__)
 
 def get_query(url: str) -> str:
     """Fetch SQL query from URL."""
@@ -40,24 +41,41 @@ def get_query(url: str) -> str:
 
 def fetch_graduation_candidates(dbname: str) -> pd.DataFrame:
     """Fetch projects that meet graduation criteria."""
+    db_config = {
+        'host': os.environ.get('DB_HOST'),
+        'user': os.environ.get('DB_USER'),
+        'password': os.environ.get('DB_PASSWORD'),
+        'database': os.environ.get('DB_NAME'),
+        'charset': 'utf8mb4',
+        'cursorclass': pymysql.cursors.DictCursor # Returns rows as dictionarie
+    }
+    # Advanced environment variable check
+    missing_keys = [key for key in ['host', 'user', 'password', 'database'] if not db_config[key]]
+    if missing_keys:
+        logger.error(f"Missing required DB config keys: {', '.join(missing_keys)}. Check environment variables.")
+        return pd.DataFrame()  # Return empty DataFrame instead of []
+
     try:
         query_url = "https://raw.githubusercontent.com/indictechcom/wm-incubator-stats-superset/refs/heads/main/queries/generate_graduation_alerts.sql"
         query = get_query(query_url)
-        
+
+        logger.info(f"Connecting to Toolforge DB '{dbname}'")
         conn = forge.connect(dbname)
+        logger.info("Database connection successful.")
+
         with conn.cursor() as cur:
+            logger.info("Executing graduation logic query...")
             cur.execute(query)
             result = cur.fetchall()
             df = pd.DataFrame(result, columns=[col[0] for col in cur.description])
-        
-        logging.info(f"Found {len(df)} potential graduation candidates")
+
+        logger.info(f"Query returned {len(df)} potential graduation candidates.")
         return df
-        
     except Exception as e:
-        logging.error(f"Failed to fetch graduation candidates: {e}")
+        logger.error(f"Failed to fetch graduation candidates: {e}")
         raise
 
-def send_email(df):
+def send_email(df: pd.DataFrame):
     for _, row in df.iterrows():
         send_graduation_alert(
             project_type=row['project'],
@@ -68,8 +86,13 @@ def send_email(df):
         )
 
 def main():
+    logger.info("Starting graduation alert process...")
     df = fetch_graduation_candidates("s56696__incubator_stats_daily_p")
-    send_email(df)
+    if df.empty:
+        logger.info("No graduation candidates found.")
+    else:
+        send_email(df)
+        logger.info("Graduation alert emails sent.")
     
 
 if __name__ == "__main__":
