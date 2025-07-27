@@ -42,7 +42,7 @@ monthly_active AS (
 )
 
 SELECT
-    month_start,
+    month_start AS snapshot_month,
     CASE project_code
       WHEN 'Wp' THEN 'wikipedia'
       WHEN 'Wq' THEN 'wikiquote'
