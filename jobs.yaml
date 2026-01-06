@@ -1,13 +1,17 @@
-- command: /data/project/incubator-dashboard-db/www/python/src/scripts/update_incubator_revisions_daily.sh
+- command: /data/project/incubator-dashboard-db/www/python/src/scripts/shell/update_incubator_stats_daily_table.sh
   image: python3.11
   name: incubator-stats-daily
   schedule: "@daily"
   emails: onfailure
   retry: 3
+  filelog-stdout: daily_stats.out
+  filelog-stderr: daily_stats.err
 
-- command: /data/project/incubator-dashboard-db/www/python/src/scripts/fetch_project_user_stats.sh
+- command: /data/project/incubator-dashboard-db/www/python/src/scripts/shell/update_incubator_active_editors_monthly.sh
   image: python3.11
-  name: fetch-project-user-stats
+  name: incubator-active-editors-monthly
   schedule: "@monthly"
   emails: onfailure
   retry: 3
+  filelog-stdout: monthly_active_editors.out
+  filelog-stderr: monthly_active_editors.err

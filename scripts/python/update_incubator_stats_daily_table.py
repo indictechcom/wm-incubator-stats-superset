@@ -12,7 +12,7 @@ from utils import (
     sql_tuple
 )
 
-log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs')
+log_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'logs')
 os.makedirs(log_dir, exist_ok=True)
 
 log_file = os.path.join(log_dir, 'incubator_stats_daily.log')
@@ -32,12 +32,12 @@ user_agent = forge.set_user_agent(
 )
 destination_table = "incubator_stats_daily"
 
-with open('../static_data/project_map.json', 'r', encoding='utf-8') as f:
+with open('../../static_data/project_map.json', 'r', encoding='utf-8') as f:
     project_map = json.load(f)
 
 project_map_r = {v: k for k, v in project_map.items()}
 
-with open('../static_data/exclude_users.json', 'r', encoding='utf-8') as f:
+with open('../../static_data/exclude_users.json', 'r', encoding='utf-8') as f:
     exclude_users = json.load(f)
 
 def construct_prefix(lang_code, db_group):
