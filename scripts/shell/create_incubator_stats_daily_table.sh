@@ -1,8 +1,10 @@
 #!/bin/bash
 
-CNF_PATH="$HOME/replica.my.cnf"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
-SQL_FILE="$HOME/www/python/src/queries/create_incubator_stats_daily.sql"
+CNF_PATH="$HOME/replica.my.cnf"
+SQL_FILE="$REPO_ROOT/queries/create_incubator_stats_daily.sql"
 
 DATABASE="s56696__incubator_stats_daily_p"
 HOST="tools.db.svc.wikimedia.cloud"

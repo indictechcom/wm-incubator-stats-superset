@@ -1,5 +1,7 @@
 #!/bin/bash
 
-source $HOME/pyvenv/bin/activate
-cd ~/www/python/src/scripts/python
-python3 update_incubator_stats_daily_table.py
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+
+source "$HOME/pyvenv/bin/activate"
+python3 "$REPO_ROOT/scripts/python/update_incubator_stats_daily_table.py"

@@ -1,4 +1,4 @@
-- command: /data/project/incubator-dashboard-db/www/python/src/scripts/shell/update_incubator_stats_daily_table.sh
+- command: $HOME/www/python/wm-incubator-stats-superset/scripts/shell/update_incubator_stats_daily_table.sh
   image: python3.11
   name: incubator-stats-daily
   schedule: "@daily"
@@ -7,7 +7,7 @@
   filelog-stdout: daily_stats.out
   filelog-stderr: daily_stats.err
 
-- command: /data/project/incubator-dashboard-db/www/python/src/scripts/shell/update_incubator_active_editors_monthly.sh
+- command: $HOME/www/python/wm-incubator-stats-superset/scripts/shell/update_incubator_active_editors_monthly.sh
   image: python3.11
   name: incubator-active-editors-monthly
   schedule: "@monthly"
